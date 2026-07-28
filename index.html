@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energym | Allenamento, corsi e lezioni private</title>
+<meta name="description" content="Energym — sala pesi, corsi collettivi, personal training e lezioni private. Prenota il tuo slot in pochi click.">
+
+<!-- ⚠️ DOMINIO SEGNAPOSTO: sostituire https://www.energymgenzano.it con l'indirizzo reale del sito
+     non appena disponibile (qui sotto + in robots.txt e sitemap.xml) -->
+<link rel="canonical" href="https://www.energymgenzano.it/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Energym">
+<meta property="og:title" content="Energym | Allenamento, corsi e lezioni private">
+<meta property="og:description" content="Sala pesi, corsi collettivi, personal training e lezioni private a Genzano di Roma. Prenota il tuo slot in pochi click.">
+<meta property="og:url" content="https://www.energymgenzano.it/">
+<meta property="og:image" content="https://www.energymgenzano.it/guidelines/energym_logo_trasparente.png">
+<meta property="og:locale" content="it_IT">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Energym | Allenamento, corsi e lezioni private">
+<meta name="twitter:description" content="Sala pesi, corsi collettivi, personal training e lezioni private a Genzano di Roma.">
+<meta name="twitter:image" content="https://www.energymgenzano.it/guidelines/energym_logo_trasparente.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ExerciseGym",
+      "@id": "https://www.energymgenzano.it/#sede-annarumi",
+      "name": "Energym",
+      "image": "https://www.energymgenzano.it/guidelines/energym_logo_trasparente.png",
+      "url": "https://www.energymgenzano.it/",
+      "telephone": "+393332005385",
+      "email": "energymgenzano@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Bruno Annarumi 19",
+        "addressLocality": "Genzano di Roma",
+        "addressRegion": "RM",
+        "addressCountry": "IT"
+      },
+      "sameAs": ["https://www.instagram.com/energym_genzano/"]
+    },
+    {
+      "@type": "ExerciseGym",
+      "@id": "https://www.energymgenzano.it/#sede-de-gasperi",
+      "name": "Energym",
+      "image": "https://www.energymgenzano.it/guidelines/energym_logo_trasparente.png",
+      "url": "https://www.energymgenzano.it/",
+      "telephone": "+393332005385",
+      "email": "energymgenzano@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Alcide De Gasperi 10",
+        "addressLocality": "Genzano di Roma",
+        "addressRegion": "RM",
+        "addressCountry": "IT"
+      },
+      "sameAs": ["https://www.instagram.com/energym_genzano/"]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "beige-latte": "#F7F1E6",
+          "beige-sabbia": "#E8DCC5",
+          "tortora": "#C9B99A",
+          "rosa-cipria": "#FBE4EC",
+          "rosa-confetto": "#F3B8CE",
+          "rosa-energia": "#D6558E",
+          "viola-nebbia": "#EDE3F7",
+          "viola-glicine": "#C9AEE8",
+          "viola-profondo": "#9B72C4",
+          "celeste-bruma": "#DCEEF7",
+          "azzurro-polvere": "#A8D8ED",
+          "blu-energia": "#5FA8CC",
+          "ink": "#2A2119",
+          "ink-soft": "#5B4F45",
+        },
+        fontFamily: {
+          display: ["Poppins", "sans-serif"],
+          body: ["Work Sans", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  :root{
+    --shadow-soft: 0 1px 2px rgba(42,33,25,.06), 0 14px 34px -16px rgba(214,85,142,.38);
+    --shadow-float: 0 24px 64px -18px rgba(155,114,196,.45), 0 10px 24px -10px rgba(214,85,142,.32);
+    --ease-spring: cubic-bezier(.34,1.56,.64,1);
+    --ease-out: cubic-bezier(.16,1,.3,1);
+  }
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--beige-latte, #F7F1E6);
+    color:#2A2119;
+    font-family:'Work Sans', sans-serif;
+    line-height:1.7;
+  }
+  h1,h2,h3,h4,.font-display{font-family:'Poppins', sans-serif;}
+  .tracking-tightish{letter-spacing:-0.03em;}
+
+  /* ---------- Focus states ---------- */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid #9B72C4;
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn-primary{
+    display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+    border-radius:9999px;
+    padding:.9rem 1.9rem;
+    font-weight:600;
+    color:#fff;
+    background:linear-gradient(135deg,#D6558E,#9B72C4);
+    box-shadow:var(--shadow-soft);
+    transform:translateY(0) scale(1);
+    transition:transform .35s var(--ease-spring), box-shadow .35s var(--ease-out), filter .3s var(--ease-out);
+    white-space:nowrap;
+  }
+  .btn-primary:hover{ transform:translateY(-3px) scale(1.015); filter:brightness(1.06); box-shadow:var(--shadow-float); }
+  .btn-primary:active{ transform:translateY(0) scale(.98); filter:brightness(.98); }
+
+  .btn-secondary{
+    display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+    border-radius:9999px;
+    padding:.85rem 1.85rem;
+    font-weight:600;
+    color:#9B72C4;
+    background:rgba(255,255,255,.5);
+    border:2px solid #C9AEE8;
+    transform:translateY(0) scale(1);
+    transition:transform .35s var(--ease-spring), background-color .3s var(--ease-out), border-color .3s var(--ease-out);
+    white-space:nowrap;
+  }
+  .btn-secondary:hover{ background-color:#EDE3F7; border-color:#9B72C4; transform:translateY(-3px) scale(1.015); }
+  .btn-secondary:active{ transform:translateY(0) scale(.98); }
+
+  /* ---------- Signature: tick-bars pulse motif ---------- */
+  .tick-bars{ display:inline-flex; align-items:flex-end; gap:3px; height:16px; flex-shrink:0; }
+  .tick-bars span{
+    width:3px; border-radius:2px;
+    background:linear-gradient(180deg,#D6558E,#9B72C4);
+    display:block;
+    animation:tick-pulse 1.6s ease-in-out infinite;
+  }
+  .tick-bars span:nth-child(1){height:40%; animation-delay:0s;}
+  .tick-bars span:nth-child(2){height:100%; animation-delay:.15s;}
+  .tick-bars span:nth-child(3){height:65%; animation-delay:.3s;}
+  .tick-bars span:nth-child(4){height:80%; animation-delay:.45s;}
+  .tick-bars.big{ height:34px; gap:5px; }
+  .tick-bars.big span{ width:6px; }
+  @keyframes tick-pulse{
+    0%,100%{ transform:scaleY(.55); opacity:.55; }
+    50%{ transform:scaleY(1); opacity:1; }
+  }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:.6rem;
+    font-family:'Work Sans', sans-serif;
+    font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+    font-size:.78rem; color:#D6558E;
+  }
+
+  /* ---------- Surfaces / depth ---------- */
+  .surface-elevated{
+    background:#fff;
+    border-radius:1.25rem;
+    box-shadow:var(--shadow-soft);
+  }
+  .surface-floating{
+    background:#fff;
+    border-radius:1.5rem;
+    box-shadow:var(--shadow-float);
+  }
+
+  /* ---------- Footer map cards ---------- */
+  .map-card{
+    border-radius:1.25rem;
+    overflow:hidden;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.1);
+    transition:border-color .25s ease, background-color .25s ease;
+  }
+  .map-card:hover{
+    background:rgba(255,255,255,.06);
+    border-color:rgba(255,255,255,.18);
+  }
+  .map-card-frame{
+    position:relative;
+    height:160px;
+    overflow:hidden;
+  }
+  @media (min-width:640px){
+    .map-card-frame{ height:210px; }
+  }
+  .map-card-frame iframe{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    border:0;
+    filter:grayscale(.25) brightness(.94) contrast(1.05);
+  }
+  .map-card-foot{
+    display:flex; align-items:center; justify-content:space-between; gap:.75rem;
+    padding:.9rem 1.2rem;
+    font-size:.82rem;
+    color:#E8DCC5;
+  }
+  .map-card-foot a{
+    color:#F3B8CE;
+    font-weight:600;
+    white-space:nowrap;
+    transition:color .2s ease;
+  }
+  .map-card-foot a:hover,
+  .map-card-foot a:focus-visible{
+    color:#fff;
+  }
+
+  /* ---------- Grain texture ---------- */
+  .grain::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity:.05;
+    mix-blend-mode:overlay;
+    pointer-events:none;
+  }
+
+  /* ---------- Hero background blobs ---------- */
+  .hero-blobs{
+    position:absolute; inset:0; overflow:hidden; pointer-events:none;
+  }
+  .hero-blobs span{
+    position:absolute; border-radius:9999px; filter:blur(70px);
+  }
+  .hero-blobs span.b1{ width:32rem; height:32rem; top:-10rem; right:-8rem; background:radial-gradient(circle,#F3B8CE 0%, transparent 70%); }
+  .hero-blobs span.b2{ width:26rem; height:26rem; bottom:-8rem; left:-6rem; background:radial-gradient(circle,#C9AEE8 0%, transparent 70%); }
+  .hero-blobs span.b3{ width:20rem; height:20rem; top:6rem; left:30%; background:radial-gradient(circle,#DCEEF7 0%, transparent 70%); }
+
+  #hero-wave{ pointer-events:none; }
+
+  /* ---------- Image treatment ---------- */
+  .img-treated{ position:relative; overflow:hidden; }
+  .img-treated::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(42,33,25,.55), rgba(214,85,142,.12) 45%, transparent 75%);
+  }
+  .img-treated img{ mix-blend-mode:multiply; opacity:.94; }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s var(--ease-out), transform .7s var(--ease-out); }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+
+  /* ---------- Service card ---------- */
+  .service-card{
+    transition:transform .4s var(--ease-spring), box-shadow .4s var(--ease-out);
+  }
+  .service-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-float); }
+
+  /* ---------- Team marquee ---------- */
+  .instr-enrico{ transform:scale(1.12); transform-origin:50% 85%; }
+  .instr-emanuela{ transform:scale(1.15); transform-origin:50% 90%; }
+  .instr-emiliano{ transform:scale(1.1); transform-origin:50% 95%; }
+  .instr-giulia{ transform:scale(1.4); transform-origin:16% 55%; }
+  .team-columns-wrap{
+    position:relative; overflow-x:auto; overflow-y:hidden;
+    scrollbar-width:none; cursor:grab;
+    -webkit-mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    mask-image:linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  }
+  .team-columns-wrap::-webkit-scrollbar{ display:none; }
+  .team-columns-wrap.dragging{ cursor:grabbing; }
+  .team-track{
+    display:flex; align-items:stretch; gap:1.5rem; width:max-content;
+  }
+  .service-icon{
+    width:3.25rem; height:3.25rem; border-radius:1rem;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,#FBE4EC,#EDE3F7);
+    color:#D6558E;
+  }
+
+  /* ---------- Testimonials marquee ---------- */
+  .testimonial-columns-wrap{
+    display:flex; justify-content:center; gap:1.5rem;
+    max-height:640px; overflow:hidden;
+    -webkit-mask-image:linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+    mask-image:linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+  }
+  .testimonial-column{
+    display:flex; flex-direction:column; gap:1.5rem;
+    width:320px; flex-shrink:0;
+    will-change:transform;
+  }
+  .testimonial-card{
+    display:block; width:100%; text-align:left;
+    background:#fff; border:1px solid #E8DCC5; border-radius:1.5rem;
+    padding:1.75rem; cursor:pointer;
+    box-shadow:0 14px 30px -18px rgba(214,85,142,.28);
+    transition:transform .35s var(--ease-spring), box-shadow .35s var(--ease-out);
+  }
+  .testimonial-card:hover, .testimonial-card:focus-visible{
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px -16px rgba(214,85,142,.35);
+    outline:none;
+  }
+  .testimonial-card p{
+    display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .testimonial-stars{ display:flex; gap:.2rem; margin-bottom:.9rem; }
+  .testimonial-stars svg{ width:14px; height:14px; }
+  .testimonial-avatar{
+    width:2.5rem; height:2.5rem; border-radius:9999px; shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,#FBE4EC,#EDE3F7);
+    color:#D6558E; font-family:'Poppins',sans-serif; font-weight:700; font-size:.8rem;
+  }
+  @media (max-width:639px){
+    .testimonial-columns-wrap{ max-height:560px; }
+    .testimonial-column{ width:min(88vw, 360px); }
+  }
+
+  /* ---------- Mobile nav ---------- */
+  #mobile-panel{
+    transform:translateX(100%);
+    transition:transform .45s var(--ease-out);
+  }
+  #mobile-panel.open{ transform:translateX(0); }
+  #nav-overlay{
+    opacity:0; pointer-events:none;
+    transition:opacity .35s var(--ease-out);
+  }
+  #nav-overlay.open{ opacity:1; pointer-events:auto; }
+
+  /* ---------- Booking overlay/modal ---------- */
+  .booking-overlay{
+    position:fixed; inset:0; z-index:60;
+    background:rgba(42,33,25,.55);
+    display:flex; align-items:center; justify-content:center;
+    padding:1rem;
+    opacity:0; pointer-events:none;
+    transition:opacity .35s var(--ease-out);
+  }
+  .booking-overlay.open{ opacity:1; pointer-events:auto; }
+  .booking-modal{
+    background:#F7F1E6;
+    border-radius:1.75rem;
+    max-width:640px; width:100%;
+    max-height:88vh; overflow-y:auto;
+    padding:2rem;
+    box-shadow:var(--shadow-float);
+    transform:scale(.92) translateY(16px);
+    opacity:0;
+    transition:transform .4s var(--ease-spring), opacity .3s var(--ease-out);
+  }
+  .booking-overlay.open .booking-modal{ transform:scale(1) translateY(0); opacity:1; }
+
+  .booking-close{
+    position:absolute; top:1.25rem; right:1.5rem;
+    width:2.25rem; height:2.25rem; border-radius:9999px;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff; color:#5B4F45; font-size:1rem;
+    box-shadow:var(--shadow-soft);
+    transition:transform .3s var(--ease-spring), color .3s var(--ease-out);
+  }
+  .booking-close:hover{ transform:rotate(90deg); color:#D6558E; }
+
+  /* ---------- Palinsesto (schedule) modal ---------- */
+  .schedule-modal{ max-width:960px; }
+  .schedule-table-wrap{ overflow-x:auto; border-radius:1rem; border:1px solid #E8DCC5; }
+  .schedule-table{ width:100%; min-width:760px; border-collapse:collapse; }
+  .schedule-table th, .schedule-table td{
+    border:1px solid #E8DCC5; padding:.65rem .85rem;
+    text-align:left; vertical-align:top; font-size:.82rem; color:#2A2119;
+  }
+  .schedule-table thead th{
+    background:#FBE4EC; font-family:'Poppins',sans-serif; font-weight:600;
+    text-transform:uppercase; font-size:.7rem; letter-spacing:.06em; white-space:nowrap;
+  }
+  .schedule-table tbody td:first-child{
+    font-weight:600; white-space:nowrap; background:#F7F1E6;
+  }
+  .schedule-table td.closed{
+    text-align:center; vertical-align:middle; color:#C9B99A;
+    font-family:'Poppins',sans-serif; font-weight:700;
+    text-transform:uppercase; letter-spacing:.06em; background:#FAF6EC;
+  }
+  .schedule-table .slot-time{
+    display:block; font-size:.68rem; font-weight:600; color:#9B72C4; margin-bottom:.15rem;
+  }
+
+  /* ---------- Foglio stampabile / PDF del palinsesto ---------- */
+  #print-schedule{ display:none; }
+
+  @media print{
+    @page{ margin:14mm; }
+    html, body{ background:#fff !important; height:auto !important; }
+    body > *:not(#print-schedule){ display:none !important; }
+    #print-schedule{
+      display:block !important;
+      position:static; width:100%;
+      -webkit-print-color-adjust:exact; print-color-adjust:exact;
+      font-family:'Work Sans', sans-serif; color:#2A2119;
+    }
+    .print-head{
+      display:flex; align-items:center; gap:1.1rem;
+      border-bottom:2px solid #D6558E; padding-bottom:14px; margin-bottom:20px;
+    }
+    .print-head img{ height:46px; width:auto; }
+    .print-head-text h1{
+      font-family:'Poppins',sans-serif; font-weight:700; font-size:20px; margin:0;
+      color:#2A2119;
+    }
+    .print-head-text p{ margin:2px 0 0; font-size:11px; color:#5B4F45; }
+    .print-table{ width:100%; border-collapse:collapse; font-size:10.5px; }
+    .print-table th, .print-table td{
+      border:1px solid #C9B99A; padding:6px 7px; text-align:left; vertical-align:top;
+    }
+    .print-table thead th{
+      background:#FBE4EC !important; font-family:'Poppins',sans-serif; font-weight:700;
+      text-transform:uppercase; font-size:9px; letter-spacing:.05em;
+    }
+    .print-table tbody td:first-child{ font-weight:600; white-space:nowrap; background:#F7F1E6 !important; }
+    .print-table .print-closed{
+      text-align:center; vertical-align:middle; font-weight:700; text-transform:uppercase;
+      letter-spacing:.05em; color:#9B8060; background:#FAF6EC !important;
+    }
+    .print-slot-time{ display:block; font-size:9px; font-weight:600; color:#9B72C4; }
+    .print-note{ font-size:10px; color:#8a7d6f; margin:14px 0 0; }
+    .print-footer{
+      display:flex; gap:30px; margin-top:22px; padding-top:14px;
+      border-top:1px solid #E8DCC5; font-size:10.5px;
+    }
+    .print-footer strong{
+      display:block; font-family:'Poppins',sans-serif; font-size:9px;
+      text-transform:uppercase; letter-spacing:.06em; color:#D6558E; margin-bottom:5px;
+    }
+    .print-footer span{ display:block; color:#5B4F45; line-height:1.6; }
+  }
+
+  .day-tab{
+    border-radius:9999px; padding:.55rem 1.1rem; font-weight:600; font-size:.9rem;
+    border:2px solid transparent;
+    background:#fff; color:#5B4F45;
+    transition:transform .3s var(--ease-spring), background-color .25s var(--ease-out), color .25s var(--ease-out), border-color .25s var(--ease-out);
+  }
+  .day-tab:hover{ transform:translateY(-2px); }
+  .day-tab[aria-selected="true"]{
+    background:linear-gradient(135deg,#D6558E,#9B72C4);
+    color:#fff;
+  }
+
+  .week-nav-btn{
+    width:2.25rem; height:2.25rem; border-radius:9999px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background:#fff; border:2px solid #E8DCC5; color:#5B4F45;
+    transition:transform .25s var(--ease-spring), border-color .2s var(--ease-out), color .2s var(--ease-out), opacity .2s var(--ease-out);
+  }
+  .week-nav-btn:hover:not(:disabled){ transform:translateY(-2px); border-color:#C9AEE8; color:#9B72C4; }
+  .week-nav-btn:active:not(:disabled){ transform:translateY(0); }
+  .week-nav-btn:disabled{ opacity:.35; cursor:not-allowed; }
+
+  .slot-btn{
+    border-radius:.85rem; padding:.7rem .5rem; font-weight:600; font-size:.85rem;
+    background:#fff; color:#2A2119;
+    border:2px solid #E8DCC5;
+    transition:transform .25s var(--ease-spring), background-color .2s var(--ease-out), border-color .2s var(--ease-out), color .2s var(--ease-out);
+  }
+  .slot-btn:hover:not(:disabled){ transform:translateY(-2px); border-color:#C9AEE8; }
+  .slot-btn[aria-pressed="true"]{
+    background:linear-gradient(135deg,#D6558E,#9B72C4);
+    border-color:transparent; color:#fff;
+    transform:translateY(-2px);
+  }
+  .slot-btn:disabled{
+    background:#EFE9DC; color:#C9B99A; border-color:#EFE9DC;
+    text-decoration:line-through;
+    cursor:not-allowed;
+  }
+
+  .legend-dot{ width:.7rem; height:.7rem; border-radius:9999px; display:inline-block; }
+
+  input[type="text"], input[type="email"], input[type="tel"]{
+    width:100%; border-radius:.85rem; border:2px solid #E8DCC5; padding:.7rem .9rem;
+    background:#fff; font-family:'Work Sans', sans-serif;
+    transition:border-color .25s var(--ease-out);
+  }
+  input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus{ border-color:#9B72C4; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body class="font-body text-ink">
+
+<!-- ===================== HEADER ===================== -->
+<header class="sticky top-0 z-50 bg-beige-latte/90 backdrop-blur-md border-b border-beige-sabbia">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 shrink-0">
+      <img src="guidelines/energym_logo_trasparente.png" alt="Energym" class="h-9 w-auto">
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-9 font-medium text-ink-soft">
+      <a href="#chi-siamo" class="hover:text-rosa-energia transition-colors">Chi siamo</a>
+      <a href="#istruttori" class="hover:text-rosa-energia transition-colors">Istruttori</a>
+      <a href="#corsi" class="hover:text-rosa-energia transition-colors">Corsi</a>
+      <a href="#recensioni" class="hover:text-rosa-energia transition-colors">Recensioni</a>
+      <a href="#prenota" class="hover:text-rosa-energia transition-colors">Prenota</a>
+      <a href="#contatti" class="hover:text-rosa-energia transition-colors">Contatti</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button type="button" data-open-booking class="hidden sm:inline-flex btn-primary !py-3 !px-6 text-sm">Prenota lezione privata</button>
+      <button id="nav-toggle" aria-label="Apri il menu" aria-expanded="false" class="lg:hidden w-11 h-11 rounded-full surface-elevated flex items-center justify-center">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav panel -->
+<div id="nav-overlay" class="fixed inset-0 bg-ink/50 z-40 lg:hidden"></div>
+<div id="mobile-panel" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-beige-latte z-50 lg:hidden shadow-2xl p-8 flex flex-col gap-7">
+  <button id="nav-close" aria-label="Chiudi il menu" class="self-end w-10 h-10 rounded-full surface-elevated flex items-center justify-center">
+    <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 2l12 12M14 2L2 14"/></svg>
+  </button>
+  <a href="#chi-siamo" class="mobile-link text-lg font-semibold">Chi siamo</a>
+  <a href="#istruttori" class="mobile-link text-lg font-semibold">Istruttori</a>
+  <a href="#corsi" class="mobile-link text-lg font-semibold">Corsi</a>
+  <a href="#recensioni" class="mobile-link text-lg font-semibold">Recensioni</a>
+  <a href="#prenota" class="mobile-link text-lg font-semibold">Prenota</a>
+  <a href="#contatti" class="mobile-link text-lg font-semibold">Contatti</a>
+  <button type="button" data-open-booking class="mobile-link btn-primary justify-center mt-4">Prenota lezione privata</button>
+</div>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="relative overflow-hidden grain">
+    <div class="hero-blobs"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+    <canvas id="hero-wave" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
+
+    <div class="relative max-w-3xl mx-auto px-5 sm:px-8 pt-20 pb-20 lg:pt-28 lg:pb-24 text-center">
+      <span class="eyebrow justify-center"><span class="tick-bars"><span></span><span></span><span></span><span></span></span>Energym</span>
+      <h1 class="font-display tracking-tightish text-4xl sm:text-5xl lg:text-6xl font-800 leading-[1.05] mt-5 text-ink" style="font-weight:800;">
+        Trasforma l'energia<br class="hidden sm:block"> in risultati.
+      </h1>
+      <p class="mt-6 text-lg text-ink-soft max-w-xl mx-auto">
+        Corsi collettivi, personal training e lezioni private con un metodo su misura per il tuo obiettivo. Un ambiente pensato per farti sentire a casa fin dal primo allenamento.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-4 justify-center">
+        <button type="button" data-open-booking class="btn-primary">Prenota lezione privata</button>
+        <a href="#corsi" class="btn-secondary">Scopri i corsi</a>
+      </div>
+
+      <div class="mt-12 inline-flex items-center gap-4 surface-floating px-6 py-4 text-left">
+        <span class="tick-bars"><span></span><span></span><span></span><span></span></span>
+        <p class="text-sm font-semibold leading-snug">Lezioni private ogni settimana,<br>su prenotazione</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHI SIAMO ===================== -->
+  <section id="chi-siamo" class="max-w-4xl mx-auto px-5 sm:px-8 py-24 text-center">
+    <div class="reveal">
+      <span class="eyebrow justify-center"><span class="tick-bars"><span></span><span></span><span></span><span></span></span>Chi siamo</span>
+      <h2 class="font-display tracking-tightish text-3xl sm:text-4xl font-700 mt-4 leading-tight" style="font-weight:700;">Energia, metodo, costanza.</h2>
+      <p class="mt-6 text-ink-soft max-w-2xl mx-auto">
+        Energym nasce per chi vuole allenarsi con metodo, non solo con impegno. Uniamo sala pesi, corsi di gruppo e percorsi personalizzati in un unico spazio, con un'attenzione costante a come ti senti prima, durante e dopo ogni allenamento.
+      </p>
+      <div class="mt-10 grid sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
+        <div class="flex flex-col items-center text-center">
+          <div class="service-icon mb-3">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7v10M18 7v10M2 10v4M22 10v4M6 12h12"/></svg>
+          </div>
+          <p class="font-semibold text-sm">Metodo su misura</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="service-icon mb-3">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2 7 4-14 2 7h8"/></svg>
+          </div>
+          <p class="font-semibold text-sm">Attenzione individuale</p>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <div class="service-icon mb-3">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          </div>
+          <p class="font-semibold text-sm">Community motivante</p>
+        </div>
+      </div>
+
+      <div class="mt-12 inline-flex flex-col sm:flex-row items-center gap-4 surface-floating service-card px-7 py-5 text-left max-w-xl mx-auto">
+        <div class="service-icon shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16M2 13h20"/></svg>
+        </div>
+        <div class="text-center sm:text-left">
+          <p class="font-semibold text-sm">Training aziendale in sede</p>
+          <p class="text-sm text-ink-soft mt-1">Portiamo i nostri corsi direttamente in azienda, con percorsi su misura per i team. Un servizio già realizzato per la Fondazione ENPAM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ISTRUTTORI ===================== -->
+  <section id="istruttori" class="max-w-7xl mx-auto px-5 sm:px-8 py-20">
+    <div class="reveal max-w-xl">
+      <span class="eyebrow"><span class="tick-bars"><span></span><span></span><span></span><span></span></span>Il team</span>
+      <h2 class="font-display tracking-tightish text-3xl sm:text-4xl font-700 mt-4" style="font-weight:700;">I nostri istruttori</h2>
+      <p class="mt-3 text-sm text-ink-soft">Un team di professionisti qualificati, ognuno specializzato nella propria disciplina.</p>
+    </div>
+
+    <div id="team-columns-wrap" class="team-columns-wrap mt-14">
+      <div id="team-track" class="team-track">
+        <article class="service-card surface-elevated overflow-hidden shrink-0 min-w-0 w-[260px] sm:w-[280px] flex flex-col">
+          <div class="aspect-[3/4] w-full min-h-0 overflow-hidden bg-beige-sabbia/40 shrink-0">
+            <img src="guidelines/Elisabetta.webp" alt="Elisabetta De Roia" class="w-full h-full object-cover object-[58%_0%]">
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-base" style="font-weight:600;">Elisabetta De Roia</h3>
+            <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-rosa-energia">Pilates · Reformer · Total Body · Training aziendale</p>
+            <p class="mt-3 text-sm text-ink-soft flex-1">Direttore tecnico di Energym, ne porta avanti lo spirito fin dal primo giorno. Specializzata in Pilates, Pilates Reformer e Total Body, guida ogni lezione con esperienza, precisione e la stessa energia di sempre. Segue inoltre percorsi di training aziendale per le imprese.</p>
+          </div>
+        </article>
+
+        <article class="service-card surface-elevated overflow-hidden shrink-0 min-w-0 w-[260px] sm:w-[280px] flex flex-col">
+          <div class="aspect-[3/4] w-full min-h-0 overflow-hidden bg-beige-sabbia/40 shrink-0">
+            <img src="guidelines/Enrico.webp" alt="Enrico Di Vita" class="w-full h-full object-cover object-top instr-enrico">
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-base" style="font-weight:600;">Enrico Di Vita</h3>
+            <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-rosa-energia">Pancafit · Training aziendale</p>
+            <p class="mt-3 text-sm text-ink-soft flex-1">Fondatore storico di Energym, oggi si dedica alle lezioni di Pancafit, individuali e di gruppo, e ai percorsi di training aziendale per le imprese.</p>
+          </div>
+        </article>
+
+        <article class="service-card surface-elevated overflow-hidden shrink-0 min-w-0 w-[260px] sm:w-[280px] flex flex-col">
+          <div class="aspect-[3/4] w-full min-h-0 overflow-hidden bg-beige-sabbia/40 shrink-0">
+            <img src="guidelines/Emanuela.webp" alt="Emanuela Villani" class="w-full h-full object-cover object-top instr-emanuela">
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-base" style="font-weight:600;">Emanuela Villani</h3>
+            <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-rosa-energia">GAG · Total Body · Personal</p>
+            <p class="mt-3 text-sm text-ink-soft flex-1">Conduce le lezioni di GAG e Total Body con un metodo dinamico e coinvolgente, e segue i percorsi di personal training costruiti su misura per obiettivi specifici e risultati concreti. Specializzata in allenamento al femminile.</p>
+          </div>
+        </article>
+
+        <article class="service-card surface-elevated overflow-hidden shrink-0 min-w-0 w-[260px] sm:w-[280px] flex flex-col">
+          <div class="aspect-[3/4] w-full min-h-0 overflow-hidden bg-beige-sabbia/40 shrink-0">
+            <img src="guidelines/Emiliano.webp" alt="Emiliano Lattanzi" class="w-full h-full object-cover object-top instr-emiliano">
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-base" style="font-weight:600;">Emiliano Lattanzi</h3>
+            <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-rosa-energia">Funzionale · Ginnastica generale</p>
+            <p class="mt-3 text-sm text-ink-soft flex-1">Specializzato in allenamento funzionale e ginnastica generale, è anche preparatore atletico per gare e competizioni: il punto di riferimento per chi si allena con un obiettivo agonistico.</p>
+          </div>
+        </article>
+
+        <article class="service-card surface-elevated overflow-hidden shrink-0 min-w-0 w-[260px] sm:w-[280px] flex flex-col">
+          <div class="aspect-[3/4] w-full min-h-0 overflow-hidden bg-beige-sabbia/40 shrink-0">
+            <img src="guidelines/Ludovica.webp" alt="Ludovica Iacoangeli" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-base" style="font-weight:600;">Ludovica Iacoangeli</h3>
+            <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-rosa-energia">Baby Fitness · Allenamento Longevity</p>
+            <p class="mt-3 text-sm text-ink-soft flex-1">Segue i più piccoli nelle lezioni di Baby Fitness e chi cerca un allenamento longevity, pensato per restare attivi e in salute con un approccio paziente e su misura per ogni età della vita.</p>
+          </div>
+        </article>
+
+        <article class="service-card surface-elevated overflow-hidden shrink-0 min-w-0 w-[260px] sm:w-[280px] flex flex-col">
+          <div class="aspect-[3/4] w-full min-h-0 overflow-hidden bg-beige-sabbia/40 shrink-0">
+            <img src="guidelines/Giulia.webp" alt="Giulia Rossi" class="w-full h-full object-cover object-top instr-giulia">
+          </div>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="font-display font-600 text-base" style="font-weight:600;">Giulia Rossi</h3>
+            <p class="mt-1 text-xs font-semibold uppercase tracking-wide text-rosa-energia">Yoga · Hatha · Yin</p>
+            <p class="mt-3 text-sm text-ink-soft flex-1">Guida le lezioni di Yoga, in particolare Hatha Yoga e Yin Yoga, adatte a tutti i livelli: respiro, consapevolezza e movimento lento per ritrovare equilibrio dentro e fuori dalla sala.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CORSI / SERVIZI ===================== -->
+  <section id="corsi" class="bg-white/60 border-y border-beige-sabbia py-24">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="reveal max-w-xl">
+        <span class="eyebrow"><span class="tick-bars"><span></span><span></span><span></span><span></span></span>Cosa offriamo</span>
+        <h2 class="font-display tracking-tightish text-3xl sm:text-4xl font-700 mt-4" style="font-weight:700;">I nostri corsi e servizi</h2>
+      </div>
+
+      <div class="mt-14 grid sm:grid-cols-3 gap-6">
+        <!-- Corsi di gruppo -->
+        <div class="reveal service-card surface-elevated p-7">
+          <div class="service-icon mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><circle cx="17.5" cy="9.5" r="2.6"/><path d="M15.7 14.3c2.7.4 4.8 2.4 4.8 5.2"/></svg>
+          </div>
+          <h3 class="font-display font-600 text-lg" style="font-weight:600;">Corsi di Gruppo</h3>
+          <p class="mt-2 text-sm text-ink-soft">Lezioni collettive per allenarti in compagnia, a ogni livello ed età.</p>
+        </div>
+        <!-- Personal Training -->
+        <div class="reveal service-card surface-elevated p-7">
+          <div class="service-icon mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          </div>
+          <h3 class="font-display font-600 text-lg" style="font-weight:600;">Personal Training</h3>
+          <p class="mt-2 text-sm text-ink-soft">Sessioni individuali costruite sui tuoi obiettivi e i tuoi tempi.</p>
+        </div>
+        <!-- Lezioni Private -->
+        <div class="reveal service-card surface-elevated p-7">
+          <div class="service-icon mb-5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          </div>
+          <h3 class="font-display font-600 text-lg" style="font-weight:600;">Lezioni Private</h3>
+          <p class="mt-2 text-sm text-ink-soft">Sessioni individuali su prenotazione, con orari flessibili durante la settimana.</p>
+        </div>
+      </div>
+
+      <!-- Corsi collettivi: elenco lezioni -->
+      <div class="mt-20">
+        <div class="reveal max-w-xl">
+          <span class="eyebrow"><span class="tick-bars"><span></span><span></span><span></span><span></span></span>Corsi collettivi</span>
+          <h3 class="font-display tracking-tightish text-2xl sm:text-3xl font-700 mt-4" style="font-weight:700;">Le nostre lezioni di gruppo</h3>
+          <p class="mt-3 text-sm text-ink-soft">Scopri quando si svolge ogni lezione durante la settimana, giorno per giorno.</p>
+          <button type="button" id="open-schedule" class="btn-secondary mt-5 !py-3 !px-6 text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+            Vedi il palinsesto aggiornato
+          </button>
+        </div>
+
+        <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Total Body</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Allenamento completo che coinvolge tutti i principali gruppi muscolari in un'unica sessione.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Funzionale</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Movimenti naturali del corpo per sviluppare forza, coordinazione e resistenza.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">GAG</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Allenamento mirato su gambe, addome e glutei per tonificare e rassodare.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Tonificazione</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Circuito a corpo libero e con piccoli attrezzi per rassodare tutto il corpo.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Pilates</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Esercizi a corpo libero per postura, controllo, forza del core e mobilità articolare.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Pilates Light</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">La stessa disciplina del Pilates, con un'intensità più dolce e accessibile.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Pilates Reformer</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Pilates su macchina Reformer, per lavorare su forza e allineamento con resistenze regolabili.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Ginnastica Posturale</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Esercizi dolci per migliorare la postura e alleviare le tensioni muscolari.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Pancafit</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Metodo di allungamento globale decompensato per il riequilibrio posturale.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Flexability</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Lezione dedicata a mobilità articolare e allungamento muscolare.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Yoga</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Respiro, movimento e concentrazione per il benessere fisico e mentale.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Baby Fitness <span class="text-ink-soft font-400" style="font-weight:400;">(6-12 anni)</span></h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Attività motoria ludica pensata per i più piccoli, per crescere in movimento e in gruppo.</p>
+          </div>
+          <div class="reveal service-card p-6 rounded-2xl bg-white/70 border border-beige-sabbia">
+            <h4 class="font-display font-600 text-base" style="font-weight:600;">Programma Longevity</h4>
+            <p class="mt-1.5 text-sm text-ink-soft">Allenamento pensato per restare attivi e in salute nel tempo, su misura per ogni età della vita.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RECENSIONI ===================== -->
+  <section id="recensioni" class="relative py-20 overflow-hidden">
+    <div class="reveal max-w-xl mx-auto px-5 sm:px-8 text-center">
+      <span class="eyebrow justify-center"><span class="tick-bars"><span></span><span></span><span></span><span></span></span>Recensioni</span>
+      <h2 class="font-display tracking-tightish text-3xl sm:text-4xl font-700 mt-4" style="font-weight:700;">Le loro parole, non le nostre.</h2>
+      <p class="mt-3 text-sm text-ink-soft">Le esperienze di chi si allena ogni settimana con noi. Tocca una recensione per leggerla tutta.</p>
+    </div>
+
+    <div id="testimonial-columns" class="testimonial-columns-wrap mt-12">
+      <div class="testimonial-column" data-duration="32">
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Tiziana Mignucci" aria-label="Leggi la recensione completa di Tiziana Mignucci">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>È possibile allenarsi seriamente e allo stesso tempo sorridere, e spesso anche ridere? Sì, è possibile se si frequenta la palestra Energym e ci si affida alla professionalità di Elisabetta e dei suoi validissimi collaboratori. Per me lo scopo dell'allenamento non è tanto ottenere risultati dal punto di vista estetico, ma soprattutto mantenersi in salute, fisica e mentale: devo dire grazie a Elisabetta e al suo team se a 61 anni mi sento un leone. Grazie di esistere, Energym! ❤️💪</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">TM</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Tiziana Mignucci</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Sergio Gliottone" aria-label="Leggi la recensione completa di Sergio Gliottone">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Frequento Energym da qualche tempo e posso dire senza dubbio che è il posto giusto per chi cerca professionalità, attenzione reale alla persona e un ambiente inclusivo. La palestra ha due sedi a Genzano di Roma (Via Bruno Annarumi 19 e Via Alcide De Gasperi 10), entrambe nel cuore della città.
+
+Gli istruttori sono davvero preparati e non si limitano a seguire un programma standard: adattano gli esercizi alle tue condizioni fisiche, ai tuoi obiettivi e ai tuoi eventuali limiti, con una competenza che si nota subito.
+
+Nelle lezioni private l'esperienza è ancora più speciale: ti senti davvero al centro dell'attenzione, con un percorso costruito su misura e un supporto costante durante ogni esercizio.
+
+Menzione speciale per il Pilates con Reformer: lezioni curate nei minimi dettagli, ed Elisabetta è attentissima nel dare i giusti suggerimenti per la postura e l'esecuzione corretta di ogni movimento, in totale sicurezza. E per chi ama l'allenamento con i pesi, la sala è attrezzata e permette di allenarsi a 360 gradi, senza mai dover aspettare o rinunciare agli esercizi, sotto la guida degli istruttori.
+
+Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo e accogliente, in entrambe le sedi. Ci si sente a proprio agio fin dal primo giorno, che tu sia un principiante o un atleta esperto. Consigliatissima!</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">SG</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Sergio Gliottone</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Raffaella Lombardi" aria-label="Leggi la recensione completa di Raffaella Lombardi">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Palestra a misura d'uomo, gestita egregiamente sotto tutti i punti di vista dall'istruttrice Fitness e Personal Trainer Elisabetta De Roia che, garantisco, vi seguirà e soprattutto vi appassionerà nel vostro percorso di allenamento prefissato. Provare per credere!</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">RL</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Raffaella Lombardi</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Elena Barbonetti" aria-label="Leggi la recensione completa di Elena Barbonetti">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Dopo anni che non andavo in palestra ho trovato da Energym competenza e simpatia. Cercavo un ambiente accogliente e familiare ed è esattamente quello che ho trovato. Ho iniziato andando una volta a settimana quasi per (auto)imposizione ed è finita per diventare un piacere. Sia Emanuela che Elisabetta hanno saputo accompagnarmi con pazienza nel mio percorso ed io non posso che ringraziarle per questo ❤️</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">EB</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Elena Barbonetti</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Giulio Pajella" aria-label="Leggi la recensione completa di Giulio Pajella">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Elisabetta è effettivamente una vera professionista nel suo ambito: lodevole è il compito che svolge per tonificare e rigenerare il fisico! Grazie.</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">GP</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Giulio Pajella</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Paolo Leone" aria-label="Leggi la recensione completa di Paolo Leone">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Palestra a misura d'uomo, ambiente familiare gradevolissimo. Personale molto cortese e istruttori molto professionali. Tanti corsi in diversi orari (io faccio Pilates, che consiglio, con Elisabetta, istruttrice di grande esperienza con cui non ti annoi mai, anche perché non ti concede il respiro per farlo 😅) più una piccola sala pesi con bici da spinning. Spogliatoi pulitissimi con docce. Viva Energym!!</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">PL</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Paolo Leone</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="testimonial-column hidden sm:flex" data-duration="40">
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Simonetta Roccasecca" aria-label="Leggi la recensione completa di Simonetta Roccasecca">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Cara Elisabetta, grazie a te ho imparato a controllare il mio corpo con il Pilates, ma la cosa più grande che mi hai dato è un'altra: mi hai insegnato a guardarmi allo specchio durante gli esercizi e a non giudicarmi. Prima lo specchio per me era solo critica, adesso lo uso per ascoltarmi e per correggermi, per capire dove sono. È diventato un posto sicuro, non un nemico. In un momento della mia vita segnato dal mal di schiena, in cui sentivo di non riconoscere il mio corpo, tu mi hai ridato presenza, forza e fiducia. Mi hai fatto sentire che il mio corpo può ancora essere un alleato, e non un problema da combattere. Grazie per la pazienza infinita, per come correggi ogni centimetro, per l'energia e la calma che porti in ogni lezione. Per me la tua ora di Pilates è molto più di una lezione in palestra: è un'ora in cui torno a casa meglio di come sono arrivata. Grazie di cuore, davvero.</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">SR</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Simonetta Roccasecca</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Brunella Carliseppe" aria-label="Leggi la recensione completa di Brunella Carliseppe">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Lettera aperta alla nostra brava allenatrice e bellissima persona: Elisabetta! Voglio condividere con tutti voi di Energym la mia grande soddisfazione per aver raggiunto un importante obiettivo: in quattro anni, da quando Elisabetta ha preso le redini di Energym, sono dimagrita 10 kg e ho perso due taglie! Senza diete assurde: riducendo gli eccessi nell'alimentazione quotidiana, ma soprattutto intensificando l'attività sportiva. Questo cambiamento non è dovuto solo a un importante dimagrimento, ma anche alla bella sensazione di benessere fisico e psicologico. Grazie, Elisabetta, per la tua professionalità e per la simpatia che si respira nella tua palestra! Ci auguriamo che tu possa continuare a essere la nostra coach il più a lungo possibile! ❤️</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">BC</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Brunella Carliseppe</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Serenella Silvestri" aria-label="Leggi la recensione completa di Serenella Silvestri">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Ottima palestra ed eccellente allenatrice preparatissima. La consiglio pienamente.</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">SS</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Serenella Silvestri</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Patrizia Bernabei" aria-label="Leggi la recensione completa di Patrizia Bernabei">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>È un centro sportivo molto bene organizzato. Da 2 anni seguo le lezioni online, sono molto soddisfatta, il personale è preparato ed attento ad ogni minimo particolare, lo consiglio vivamente.</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">PB</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Patrizia Bernabei</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Rosa Mule" aria-label="Leggi la recensione completa di Rosa Mule">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Ottime persone, gentili, sorridenti, competenti e disponibili.</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">RM</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Rosa Mule</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Daniela Cirimele" aria-label="Leggi la recensione completa di Daniela Cirimele">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Sono ormai 3 anni che porto la mia bambina al corso di baby fitness e non potrei essere più soddisfatta. Un ringraziamento speciale va a Elisabetta per la sua straordinaria disponibilità e alla dolce Ludovica, che con grandissima competenza non solo fa fare ginnastica alla mia bimba, ma riesce a farlo anche in inglese! Un'attività stimolante, divertente e gestita da professioniste fantastiche. Grazie di cuore.</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">DC</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Daniela Cirimele</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="testimonial-column hidden lg:flex" data-duration="36">
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Enza Dovini" aria-label="Leggi la recensione completa di Enza Dovini">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Energym e quindi Elisabetta con il suo team mi ha dato "energia" ed entusiasmo nelle lezioni di Total Body e di Pilates. Svolgo ormai quotidianamente da circa 4 anni e ho aggiunto molti step fisici che non immaginavo raggiungessi. Mi sono messa alla prova nei vari allenamenti credendo sempre di più nelle mie possibilità fisiche e mentali. Sono molto soddisfatta per i risultati ottenuti! Brave Elisabetta ed Emanuela!</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">ED</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Enza Dovini</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Alessandra Gennari" aria-label="Leggi la recensione completa di Alessandra Gennari">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Elisabetta ama il suo lavoro e trasmette la sua energia e professionalità in maniera contagiosa! Ambiente carino, atmosfera familiare... top!!!</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">AG</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Alessandra Gennari</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Carolina Pizzo" aria-label="Leggi la recensione completa di Carolina Pizzo">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Professionale, brava e preparata sono le parole più adatte per definire Elisabetta, istruttrice e titolare della palestra. Ambiente carino e allegro: trasforma la fatica in un piacere!</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">CP</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Carolina Pizzo</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Valentina Servadio" aria-label="Leggi la recensione completa di Valentina Servadio">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Ambiente familiare e piacevole, un centro sportivo serio, curato e gestito egregiamente dalla proprietaria/istruttrice Elisabetta, bravissima insegnante molto esperta e aggiornata: qui non sei un numero ma parte di un gruppo sportivo... stra consigliata!! 🙏❤️</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">VS</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Valentina Servadio</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Paola Bianchi" aria-label="Leggi la recensione completa di Paola Bianchi">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4" data-rating="4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Palestra Top. Coach motivante e allenamenti efficaci, con programmi personalizzati. Risultati in pochi mesi: "tonicità energia e resistenza". Ambiente professionale e accogliente.</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">PB</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Paola Bianchi</span>
+          </div>
+        </article>
+
+        <article class="testimonial-card" tabindex="0" role="button" data-name="Elena Mercuri" aria-label="Leggi la recensione completa di Elena Mercuri">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+          <div class="testimonial-stars mt-4"></div>
+          <p class="text-sm text-ink-soft leading-relaxed" data-testimonial-text>Ambiente familiare e personale qualificato. L'accoglienza e l'accortezza verso gli iscritti sono indiscutibili. Non vedo l'ora di ricominciare. Ci vediamo a settembre. ❤️</p>
+          <div class="flex items-center gap-3 mt-5">
+            <span class="testimonial-avatar">EM</span>
+            <span class="font-display font-600 text-sm" style="font-weight:600;">Elena Mercuri</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRENOTA ===================== -->
+  <section id="prenota" class="relative overflow-hidden py-24">
+    <div class="hero-blobs"><span class="b1"></span><span class="b3"></span></div>
+    <div class="relative max-w-4xl mx-auto px-5 sm:px-8 text-center reveal">
+      <span class="eyebrow justify-center"><span class="tick-bars"><span></span><span></span><span></span><span></span></span>Lezioni private</span>
+      <h2 class="font-display tracking-tightish text-3xl sm:text-4xl lg:text-5xl font-700 mt-4" style="font-weight:700;">Prenota la tua lezione privata</h2>
+      <p class="mt-5 text-ink-soft max-w-xl mx-auto">
+        Scegli il giorno e l'orario che preferisci tra gli slot disponibili della settimana. Conferma in pochi secondi, direttamente da qui.
+      </p>
+      <button id="open-booking" class="btn-primary mt-9 !text-base !py-4 !px-9">Prenota lezione privata</button>
+    </div>
+  </section>
+
+  <!-- ===================== CONTATTI / FOOTER ===================== -->
+  <footer id="contatti" class="relative bg-ink text-beige-latte">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div>
+        <div class="inline-flex bg-white rounded-xl p-3">
+          <img src="guidelines/energym_logo_trasparente.png" alt="Energym" class="h-9 w-auto">
+        </div>
+        <p class="mt-5 text-sm text-beige-sabbia max-w-xs">
+          Sala pesi, corsi collettivi, personal training e lezioni private in un ambiente pensato per la tua energia.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-display font-600 text-sm tracking-wide uppercase text-rosa-confetto" style="font-weight:600;">Contatti</h4>
+        <ul class="mt-5 space-y-3 text-sm text-beige-sabbia">
+          <li>Via Bruno Annarumi 19, Genzano di Roma</li>
+          <li>Via Alcide De Gasperi 10, Genzano di Roma</li>
+          <li><a href="tel:+393332005385" class="hover:text-rosa-confetto transition-colors">333 200 5385</a></li>
+          <li><a href="mailto:energymgenzano@gmail.com" class="hover:text-rosa-confetto transition-colors">energymgenzano@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-600 text-sm tracking-wide uppercase text-rosa-confetto" style="font-weight:600;">Seguici</h4>
+        <div class="mt-5 flex gap-3">
+          <a href="https://www.instagram.com/energym_genzano/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-rosa-energia transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-display font-600 text-sm tracking-wide uppercase text-rosa-confetto" style="font-weight:600;">Dove siamo</h4>
+        <ul class="mt-5 space-y-4 text-sm text-beige-sabbia">
+          <li class="flex items-start gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-rosa-confetto mt-0.5 shrink-0"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Via Bruno Annarumi 19, Genzano di Roma</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-rosa-confetto mt-0.5 shrink-0"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span>Via Alcide De Gasperi 10, Genzano di Roma</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 pb-16 grid sm:grid-cols-2 gap-6">
+      <div class="map-card">
+        <div class="map-card-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Via+Bruno+Annarumi+19,+Genzano+di+Roma&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mappa: Via Bruno Annarumi 19, Genzano di Roma"></iframe>
+        </div>
+        <div class="map-card-foot">
+          <span>Via Bruno Annarumi 19</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Via+Bruno+Annarumi+19%2C+Genzano+di+Roma" target="_blank" rel="noopener noreferrer">Indicazioni &rarr;</a>
+        </div>
+      </div>
+      <div class="map-card">
+        <div class="map-card-frame">
+          <iframe
+            src="https://www.google.com/maps?q=Via+Alcide+De+Gasperi+10,+Genzano+di+Roma&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mappa: Via Alcide De Gasperi 10, Genzano di Roma"></iframe>
+        </div>
+        <div class="map-card-foot">
+          <span>Via Alcide De Gasperi 10</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Via+Alcide+De+Gasperi+10%2C+Genzano+di+Roma" target="_blank" rel="noopener noreferrer">Indicazioni &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 py-6">
+      <p class="text-center text-xs text-tortora">&copy; <span id="year"></span> Energym. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+</main>
+
+<!-- ===================== BOOKING MODAL ===================== -->
+<div id="booking-overlay" class="booking-overlay" aria-hidden="true">
+  <div class="booking-modal relative" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+    <button class="booking-close" id="booking-close" aria-label="Chiudi prenotazione">
+      <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 2l12 12M14 2L2 14"/></svg>
+    </button>
+
+    <!-- Step 1: select day + slot -->
+    <div id="booking-step-select">
+      <h3 id="booking-title" class="font-display text-2xl font-700 pr-8" style="font-weight:700;">Prenota la tua lezione privata</h3>
+      <p class="text-ink-soft text-sm mt-2">Scegli un giorno, poi uno degli orari disponibili.</p>
+
+      <div class="mt-6 flex items-center justify-between gap-3">
+        <button type="button" id="week-prev" class="week-nav-btn" aria-label="Giorni precedenti">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+        </button>
+        <span id="week-range" class="text-sm font-semibold text-ink-soft"></span>
+        <button type="button" id="week-next" class="week-nav-btn" aria-label="Giorni successivi">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg>
+        </button>
+      </div>
+      <div id="day-tabs" class="mt-3 flex flex-wrap gap-2" role="tablist" aria-label="Giorni disponibili"></div>
+
+      <div id="slot-grid" class="mt-6 grid grid-cols-3 sm:grid-cols-4 gap-3" aria-live="polite"></div>
+
+      <div class="mt-6 flex flex-wrap gap-5 text-xs text-ink-soft">
+        <span class="flex items-center gap-2"><span class="legend-dot" style="background:#fff;border:2px solid #E8DCC5;"></span>Disponibile</span>
+        <span class="flex items-center gap-2"><span class="legend-dot" style="background:linear-gradient(135deg,#D6558E,#9B72C4);"></span>Selezionato</span>
+        <span class="flex items-center gap-2"><span class="legend-dot" style="background:#EFE9DC;"></span>Occupato</span>
+      </div>
+    </div>
+
+    <!-- Step 2: contact form -->
+    <form id="booking-form" class="mt-2" hidden>
+      <button type="button" id="back-to-slots" class="text-sm text-rosa-energia font-semibold mb-4">&larr; Cambia orario</button>
+      <h3 class="font-display text-2xl font-700 pr-8" style="font-weight:700;">Conferma la prenotazione</h3>
+      <p class="text-ink-soft text-sm mt-2">Hai selezionato <strong id="summary-text" class="text-ink"></strong></p>
+      <div class="mt-6 space-y-4">
+        <label class="block text-sm font-semibold">Nome e cognome
+          <input type="text" name="name" required class="mt-1.5">
+        </label>
+        <label class="block text-sm font-semibold">Email
+          <input type="email" name="email" required class="mt-1.5">
+        </label>
+        <label class="block text-sm font-semibold">Numero di telefono
+          <input type="tel" name="phone" required class="mt-1.5" placeholder="333 1234567">
+        </label>
+      </div>
+      <button type="submit" class="btn-primary w-full mt-7 justify-center">Conferma prenotazione</button>
+    </form>
+
+    <!-- Step 3: success -->
+    <div id="booking-success" class="text-center py-4" hidden>
+      <div class="tick-bars big justify-center mx-auto"><span></span><span></span><span></span><span></span></div>
+      <h3 class="font-display text-2xl font-700 mt-5" style="font-weight:700;">Prenotazione confermata!</h3>
+      <p class="text-ink-soft text-sm mt-3" id="success-text"></p>
+      <p class="text-xs text-tortora mt-2" id="success-whatsapp-hint">Si è aperto WhatsApp con il messaggio pronto: premi Invia per completare la prenotazione con noi.</p>
+      <button id="book-another" class="btn-secondary mt-7">Prenota un altro slot</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PALINSESTO MODAL ===================== -->
+<div id="schedule-overlay" class="booking-overlay" aria-hidden="true">
+  <div class="booking-modal schedule-modal relative" role="dialog" aria-modal="true" aria-labelledby="schedule-title">
+    <button class="booking-close" id="schedule-close" aria-label="Chiudi palinsesto">
+      <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 2l12 12M14 2L2 14"/></svg>
+    </button>
+
+    <div class="flex flex-wrap items-start justify-between gap-4 pr-8">
+      <div>
+        <h3 id="schedule-title" class="font-display text-2xl font-700" style="font-weight:700;">Palinsesto corsi collettivi</h3>
+        <p class="text-ink-soft text-sm mt-2">L'orario aggiornato delle lezioni di gruppo, giorno per giorno.</p>
+      </div>
+      <button type="button" id="download-schedule" class="btn-secondary !py-2.5 !px-5 text-sm shrink-0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
+        Scarica il PDF
+      </button>
+    </div>
+
+    <div class="schedule-table-wrap mt-6">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Orario</th>
+            <th>Lunedì</th>
+            <th>Martedì</th>
+            <th>Mercoledì</th>
+            <th>Giovedì</th>
+            <th>Venerdì</th>
+            <th>Sabato</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>09:00–10:00</td>
+            <td>Total Body</td>
+            <td></td>
+            <td>Total Body</td>
+            <td></td>
+            <td>GAG</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>09:30–10:30</td>
+            <td></td>
+            <td>Ginnastica Posturale</td>
+            <td></td>
+            <td>Ginnastica Posturale</td>
+            <td></td>
+            <td>Flexability</td>
+          </tr>
+          <tr>
+            <td>10:00–11:00</td>
+            <td>Pilates</td>
+            <td></td>
+            <td>Flexability</td>
+            <td></td>
+            <td>Pilates</td>
+            <td rowspan="12" class="closed">Chiuso</td>
+          </tr>
+          <tr>
+            <td>10:30–11:30</td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>13:30–14:30</td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td>14:30–15:30</td>
+            <td>Pilates Light</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Pilates Light</td>
+          </tr>
+          <tr>
+            <td>15:00–16:00</td>
+            <td></td>
+            <td>Pancafit</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>16:00–17:00</td>
+            <td>Tonificazione</td>
+            <td></td>
+            <td>Tonificazione</td>
+            <td></td>
+            <td>Tonificazione</td>
+          </tr>
+          <tr>
+            <td>17:00–18:00</td>
+            <td>Baby Fitness <span class="text-tortora">(6-12 anni)</span></td>
+            <td>Ginnastica Posturale</td>
+            <td>Pilates</td>
+            <td>Ginnastica Posturale</td>
+            <td>Baby Fitness <span class="text-tortora">(6-12 anni)</span></td>
+          </tr>
+          <tr>
+            <td>18:00–19:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Pilates</td>
+          </tr>
+          <tr>
+            <td>18:30–19:30</td>
+            <td>Funzionale</td>
+            <td></td>
+            <td>Ginnastica Generale</td>
+            <td>Total Body</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>19:00–20:00</td>
+            <td></td>
+            <td>Yoga</td>
+            <td></td>
+            <td></td>
+            <td>Yoga</td>
+          </tr>
+          <tr>
+            <td>19:30–20:30</td>
+            <td>Pilates</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>20:00–21:00</td>
+            <td></td>
+            <td>Pilates</td>
+            <td></td>
+            <td>Pilates</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-xs text-tortora mt-6">Il palinsesto può subire variazioni: per conferma contattaci ai recapiti in fondo alla pagina.</p>
+  </div>
+</div>
+
+<!-- ===================== RECENSIONE MODAL ===================== -->
+<div id="testimonial-overlay" class="booking-overlay" aria-hidden="true">
+  <div class="booking-modal relative" role="dialog" aria-modal="true" aria-labelledby="testimonial-name">
+    <button class="booking-close" id="testimonial-close" aria-label="Chiudi recensione">
+      <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 2l12 12M14 2L2 14"/></svg>
+    </button>
+    <svg width="26" height="21" viewBox="0 0 20 16" fill="currentColor" class="text-rosa-confetto"><path d="M0 16V9.6C0 6.9 0.6 4.6 1.9 2.8C3.2 1 5 0 7.3 0V3.1C6 3.1 5 3.6 4.3 4.6C3.6 5.6 3.2 6.9 3.2 8.4H7.3V16H0ZM12.7 16V9.6C12.7 6.9 13.3 4.6 14.6 2.8C15.9 1 17.7 0 20 0V3.1C18.7 3.1 17.7 3.6 17 4.6C16.3 5.6 15.9 6.9 15.9 8.4H20V16H12.7Z"/></svg>
+    <p id="testimonial-text-full" class="mt-4 text-sm text-ink-soft leading-relaxed whitespace-pre-line"></p>
+    <p id="testimonial-name" class="mt-5 pt-5 border-t border-beige-sabbia font-display font-600 text-sm" style="font-weight:600;"></p>
+  </div>
+</div>
+
+<!-- ===================== FOGLIO STAMPABILE (PDF) — visibile solo in stampa ===================== -->
+<div id="print-schedule">
+  <div class="print-head">
+    <img src="guidelines/energym_logo_trasparente.png" alt="Energym">
+    <div class="print-head-text">
+      <h1>Palinsesto corsi collettivi</h1>
+      <p>Aggiornato al <span id="print-date"></span></p>
+    </div>
+  </div>
+
+  <table class="print-table">
+    <thead>
+      <tr>
+        <th>Orario</th>
+        <th>Lunedì</th>
+        <th>Martedì</th>
+        <th>Mercoledì</th>
+        <th>Giovedì</th>
+        <th>Venerdì</th>
+        <th>Sabato</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>09:00–10:00</td>
+        <td>Total Body</td>
+        <td></td>
+        <td>Total Body</td>
+        <td></td>
+        <td>GAG</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>09:30–10:30</td>
+        <td></td>
+        <td>Ginnastica Posturale</td>
+        <td></td>
+        <td>Ginnastica Posturale</td>
+        <td></td>
+        <td>Flexability</td>
+      </tr>
+      <tr>
+        <td>10:00–11:00</td>
+        <td>Pilates</td>
+        <td></td>
+        <td>Flexability</td>
+        <td></td>
+        <td>Pilates</td>
+        <td rowspan="12" class="print-closed">Chiuso</td>
+      </tr>
+      <tr>
+        <td>10:30–11:30</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>13:30–14:30</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>14:30–15:30</td>
+        <td>Pilates Light</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Pilates Light</td>
+      </tr>
+      <tr>
+        <td>15:00–16:00</td>
+        <td></td>
+        <td>Pancafit</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>16:00–17:00</td>
+        <td>Tonificazione</td>
+        <td></td>
+        <td>Tonificazione</td>
+        <td></td>
+        <td>Tonificazione</td>
+      </tr>
+      <tr>
+        <td>17:00–18:00</td>
+        <td>Baby Fitness (6-12 anni)</td>
+        <td>Ginnastica Posturale</td>
+        <td>Pilates</td>
+        <td>Ginnastica Posturale</td>
+        <td>Baby Fitness (6-12 anni)</td>
+      </tr>
+      <tr>
+        <td>18:00–19:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Pilates</td>
+      </tr>
+      <tr>
+        <td>18:30–19:30</td>
+        <td>Funzionale</td>
+        <td></td>
+        <td>Ginnastica Generale</td>
+        <td>Total Body</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>19:00–20:00</td>
+        <td></td>
+        <td>Yoga</td>
+        <td></td>
+        <td></td>
+        <td>Yoga</td>
+      </tr>
+      <tr>
+        <td>19:30–20:30</td>
+        <td>Pilates</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>20:00–21:00</td>
+        <td></td>
+        <td>Pilates</td>
+        <td></td>
+        <td>Pilates</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="print-note">Il palinsesto può subire variazioni. Per conferma, contattaci ai recapiti sottostanti.</p>
+
+  <div class="print-footer">
+    <div>
+      <strong>Dove siamo</strong>
+      <span>Via Bruno Annarumi 19, Genzano di Roma</span>
+      <span>Via Alcide De Gasperi 10, Genzano di Roma</span>
+    </div>
+    <div>
+      <strong>Contatti</strong>
+      <span>333 200 5385</span>
+      <span>energymgenzano@gmail.com</span>
+    </div>
+    <div>
+      <strong>Social</strong>
+      <span>@energym_genzano</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- Mobile nav ---------- */
+  const navToggle = document.getElementById('nav-toggle');
+  const navClose = document.getElementById('nav-close');
+  const navOverlay = document.getElementById('nav-overlay');
+  const mobilePanel = document.getElementById('mobile-panel');
+
+  function openNav(){
+    mobilePanel.classList.add('open');
+    navOverlay.classList.add('open');
+    navToggle.setAttribute('aria-expanded','true');
+  }
+  function closeNav(){
+    mobilePanel.classList.remove('open');
+    navOverlay.classList.remove('open');
+    navToggle.setAttribute('aria-expanded','false');
+  }
+  navToggle.addEventListener('click', openNav);
+  navClose.addEventListener('click', closeNav);
+  navOverlay.addEventListener('click', closeNav);
+  document.querySelectorAll('.mobile-link').forEach(a => a.addEventListener('click', closeNav));
+
+  /* ---------- Hero wavy background ---------- */
+  (function initHeroWave(){
+    const canvas = document.getElementById('hero-wave');
+    const section = document.getElementById('hero');
+    if (!canvas || !section) return;
+    const ctx = canvas.getContext('2d');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const waveColors = ['#D6558E', '#9B72C4', '#5FA8CC', '#C9AEE8', '#F3B8CE'];
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let w = 0, h = 0;
+
+    function resize(){
+      const rect = section.getBoundingClientRect();
+      w = rect.width;
+      h = rect.height;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function drawWaves(time){
+      ctx.clearRect(0, 0, w, h);
+      ctx.filter = 'blur(14px)';
+      ctx.globalAlpha = 0.5;
+      const midY = h * 0.48;
+      waveColors.forEach((color, i) => {
+        ctx.beginPath();
+        ctx.lineWidth = 62;
+        ctx.strokeStyle = color;
+        for (let x = 0; x <= w; x += 8){
+          const y =
+            midY + i * 22 +
+            Math.sin(x * 0.006 + time * 0.00035 + i * 1.3) * 34 +
+            Math.sin(x * 0.014 - time * 0.0006 + i * 0.7) * 18;
+          if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      });
+    }
+
+    let raf;
+    function loop(time){
+      drawWaves(time);
+      raf = requestAnimationFrame(loop);
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+
+    if (reduceMotion){
+      drawWaves(0);
+    } else {
+      raf = requestAnimationFrame(loop);
+    }
+  })();
+
+  /* ---------- Team: scorrimento solo manuale (nessuna animazione automatica) ---------- */
+  const teamWrap = document.getElementById('team-columns-wrap');
+  let teamDragging = false;
+  let teamDragStartX = 0;
+  let teamDragStartScroll = 0;
+
+  // Mouse drag-to-scroll (touch/trackpad scorrono già in modo nativo).
+  teamWrap.addEventListener('pointerdown', (e) => {
+    if (e.pointerType !== 'mouse') return;
+    teamDragging = true;
+    teamWrap.classList.add('dragging');
+    teamDragStartX = e.clientX;
+    teamDragStartScroll = teamWrap.scrollLeft;
+    teamWrap.setPointerCapture(e.pointerId);
+  });
+  teamWrap.addEventListener('pointermove', (e) => {
+    if (!teamDragging) return;
+    teamWrap.scrollLeft = teamDragStartScroll - (e.clientX - teamDragStartX);
+  });
+  function endTeamDrag(){
+    teamDragging = false;
+    teamWrap.classList.remove('dragging');
+  }
+  teamWrap.addEventListener('pointerup', endTeamDrag);
+  teamWrap.addEventListener('pointercancel', endTeamDrag);
+
+  /* ---------- Scroll reveal ---------- */
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold:.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  /* ---------- Testimonial expand/collapse ---------- */
+  document.querySelectorAll('[data-testimonial-text]').forEach(text => {
+    const btn = text.parentElement.querySelector('[data-testimonial-toggle]');
+    if (!btn) return;
+    if (text.scrollHeight > text.clientHeight + 2){
+      btn.classList.remove('hidden');
+    }
+    btn.addEventListener('click', () => {
+      const expanded = text.classList.toggle('line-clamp-none');
+      text.classList.toggle('line-clamp-6', !expanded);
+      btn.textContent = expanded ? 'Mostra meno' : 'Leggi tutto';
+    });
+  });
+
+  /* ---------- Booking system ---------- */
+  const SCHEDULE = {
+    "Lunedì":    ["07:30–08:30","08:30–09:30","11:30–12:30","12:30–13:30","17:30–18:30"],
+    "Martedì":   ["07:30–08:30","08:30–09:30","09:30–10:30","10:30–11:30","11:30–12:30","12:30–13:30","13:30–14:30","14:30–15:30","15:30–16:30","18:30–19:30"],
+    "Mercoledì": ["07:30–08:30","08:30–09:30","11:30–12:30","12:30–13:30","13:30–14:30","14:30–15:30","18:30–19:30","20:30–21:30"],
+    "Giovedì":   ["07:30–08:30","08:30–09:30","09:30–10:30","10:30–11:30","11:30–12:30","12:30–13:30","13:30–14:30","14:30–15:30","15:30–16:30"],
+    "Venerdì":   ["07:30–08:30","08:30–09:30","11:30–12:30","12:30–13:30","19:30–20:30","20:30–21:30"],
+    "Sabato":    ["08:00–09:00","11:00–12:00","12:00–13:00","13:00–14:00","14:00–15:00","15:00–16:00","16:00–17:00","17:00–18:00"],
+  };
+  // Nomi dei giorni indicizzati come Date.getDay() (0=Domenica). La palestra è
+  // chiusa la domenica: quel giorno non compare mai tra le date prenotabili.
+  const GIORNI_IT = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'];
+  function pad2(n){ return String(n).padStart(2, '0'); }
+  // Etichetta univoca e leggibile per una data, usata sia per il testo mostrato
+  // al cliente sia come chiave per marcare/riconoscere gli slot occupati
+  // (a differenza del solo nome del giorno, distingue settimane diverse).
+  function formatDateLabel(date){
+    return GIORNI_IT[date.getDay()] + ' ' + pad2(date.getDate()) + '/' + pad2(date.getMonth() + 1) + '/' + date.getFullYear();
+  }
+  function formatTabLabel(date){
+    return GIORNI_IT[date.getDay()].slice(0, 3) + ' ' + date.getDate() + '/' + (date.getMonth() + 1);
+  }
+  // Lunedì della settimana indicata da weekIndex (0 = settimana corrente, 1 = successiva, ...).
+  // Se oggi è domenica, la "settimana corrente" è considerata quella che inizia domani.
+  function getMondayOfWeek(weekIndex){
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    const day = d.getDay();
+    const diffToMonday = day === 0 ? 1 : 1 - day;
+    d.setDate(d.getDate() + diffToMonday + weekIndex * 7);
+    return d;
+  }
+  // Giorni prenotabili (Lunedì–Sabato) della settimana weekIndex. Per la settimana
+  // corrente, nasconde i giorni già passati (non ha senso prenotare nel passato).
+  function getWeekDates(weekIndex){
+    const monday = getMondayOfWeek(weekIndex);
+    const dates = [];
+    for (let i = 0; i < 6; i++){
+      const d = new Date(monday);
+      d.setDate(monday.getDate() + i);
+      dates.push(d);
+    }
+    if (weekIndex === 0){
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      return dates.filter(d => d >= today);
+    }
+    return dates;
+  }
+  const MAX_WEEK_INDEX = 10; // ~10 settimane prenotabili in avanti
+
+  const overlay = document.getElementById('booking-overlay');
+  const openBtns = [document.getElementById('open-booking'), ...document.querySelectorAll('[data-open-booking]')];
+  const closeBtn = document.getElementById('booking-close');
+  const weekPrevBtn = document.getElementById('week-prev');
+  const weekNextBtn = document.getElementById('week-next');
+  const weekRangeEl = document.getElementById('week-range');
+  const dayTabsEl = document.getElementById('day-tabs');
+  const slotGridEl = document.getElementById('slot-grid');
+  const stepSelect = document.getElementById('booking-step-select');
+  const bookingForm = document.getElementById('booking-form');
+  const stepSuccess = document.getElementById('booking-success');
+  const summaryText = document.getElementById('summary-text');
+  const successText = document.getElementById('success-text');
+  const backToSlots = document.getElementById('back-to-slots');
+  const bookAnother = document.getElementById('book-another');
+
+  let weekIndex = 0;
+  let selectedDate = getWeekDates(0)[0];
+  let selectedSlot = null;
+  // Slot prenotati (chiave "Lunedì 04/08/2026|07:30–08:30"), popolato sia dalle
+  // prenotazioni fatte in questa sessione sia da fetchRemoteBookedSlots().
+  const bookedSlots = new Set();
+  let lastFocusedEl = null;
+
+  function renderDayTabs(){
+    dayTabsEl.innerHTML = '';
+    const dates = getWeekDates(weekIndex);
+    const selectedLabel = formatDateLabel(selectedDate);
+    dates.forEach(date => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'day-tab';
+      btn.textContent = formatTabLabel(date);
+      btn.setAttribute('role','tab');
+      btn.setAttribute('aria-selected', formatDateLabel(date) === selectedLabel ? 'true' : 'false');
+      btn.addEventListener('click', () => {
+        selectedDate = date;
+        selectedSlot = null;
+        renderDayTabs();
+        renderSlots();
+      });
+      dayTabsEl.appendChild(btn);
+    });
+    weekPrevBtn.disabled = weekIndex === 0;
+    weekNextBtn.disabled = weekIndex >= MAX_WEEK_INDEX;
+    weekRangeEl.textContent = formatTabLabel(dates[0]) + ' – ' + formatTabLabel(dates[dates.length - 1]);
+  }
+
+  function goToWeek(idx){
+    weekIndex = idx;
+    selectedDate = getWeekDates(idx)[0];
+    selectedSlot = null;
+    renderDayTabs();
+    renderSlots();
+  }
+  weekPrevBtn.addEventListener('click', () => {
+    if (weekIndex === 0) return;
+    goToWeek(weekIndex - 1);
+  });
+  weekNextBtn.addEventListener('click', () => {
+    if (weekIndex >= MAX_WEEK_INDEX) return;
+    goToWeek(weekIndex + 1);
+  });
+
+  function renderSlots(){
+    slotGridEl.innerHTML = '';
+    const dayName = GIORNI_IT[selectedDate.getDay()];
+    const dateLabel = formatDateLabel(selectedDate);
+    (SCHEDULE[dayName] || []).forEach(time => {
+      const key = dateLabel + '|' + time;
+      const isBooked = bookedSlots.has(key);
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'slot-btn';
+      btn.textContent = time;
+      btn.disabled = isBooked;
+      btn.setAttribute('aria-pressed', (!isBooked && selectedSlot === time) ? 'true' : 'false');
+      if(!isBooked){
+        btn.addEventListener('click', () => {
+          selectedSlot = time;
+          goToForm();
+        });
+      }
+      slotGridEl.appendChild(btn);
+    });
+  }
+
+  function goToForm(){
+    summaryText.textContent = formatDateLabel(selectedDate) + ', ' + selectedSlot;
+    stepSelect.hidden = true;
+    bookingForm.hidden = false;
+    stepSuccess.hidden = true;
+    bookingForm.querySelector('input[name="name"]').focus();
+  }
+
+  function goToSelect(){
+    bookingForm.hidden = true;
+    stepSuccess.hidden = true;
+    stepSelect.hidden = false;
+    renderDayTabs();
+    renderSlots();
+  }
+
+  backToSlots.addEventListener('click', goToSelect);
+
+  // Numero WhatsApp della palestra (stesso numero mostrato in footer).
+  const GYM_WHATSAPP_NUMBER = '393332005385';
+  // Access key Web3Forms (web3forms.com) per la notifica email di backup, oltre a WhatsApp.
+  const WEB3FORMS_ACCESS_KEY = '362d2d67-4094-436e-b51d-8b40f5fc25c3';
+  // URL della Google Apps Script Web App collegata al foglio "Prenotazioni Energym":
+  // legge/scrive gli slot prenotati condivisi tra tutti i visitatori del sito.
+  const SHEET_API_URL = 'https://script.google.com/macros/s/AKfycbzkYVVV3SMZ9UgcsXg0Ug95xDKLwpgUYsfD59SwktVD8gTUju5MxrfQp9N_nTBvn9ihKQ/exec';
+
+  // Legge dal Google Sheet gli slot già prenotati da chiunque (non solo da questo
+  // browser) e li aggiunge a bookedSlots, così restano "occupati" per tutti i
+  // visitatori finché non cancellate la riga corrispondente dal foglio.
+  async function fetchRemoteBookedSlots(){
+    if (SHEET_API_URL === 'INSERIRE_URL_GOOGLE_APPS_SCRIPT') return;
+    try {
+      const res = await fetch(SHEET_API_URL);
+      const data = await res.json();
+      (data.slots || []).forEach((slot) => bookedSlots.add(slot));
+      renderSlots();
+    } catch (err) {
+      // Elenco condiviso non raggiungibile: si prosegue con la sola marcatura locale.
+    }
+  }
+
+  bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = bookingForm.querySelector('input[name="name"]').value.trim();
+    const email = bookingForm.querySelector('input[name="email"]').value.trim();
+    const phone = bookingForm.querySelector('input[name="phone"]').value.trim();
+    const giornoLabel = formatDateLabel(selectedDate);
+    const key = giornoLabel + '|' + selectedSlot;
+    bookedSlots.add(key);
+
+    const waText = encodeURIComponent(
+      'Nuova prenotazione lezione privata - Energym\n' +
+      'Giorno: ' + giornoLabel + '\n' +
+      'Orario: ' + selectedSlot + '\n' +
+      'Nome: ' + name + '\n' +
+      'Telefono: ' + phone + '\n' +
+      'Email: ' + email
+    );
+    // Apertura sincrona (nello stesso click) per evitare che il browser la blocchi come popup.
+    window.open('https://wa.me/' + GYM_WHATSAPP_NUMBER + '?text=' + waText, '_blank', 'noopener');
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: 'Nuova prenotazione lezione privata - Energym',
+        name, email, phone,
+        giorno: giornoLabel,
+        orario: selectedSlot,
+      }),
+    }).catch(() => {});
+
+    if (SHEET_API_URL !== 'INSERIRE_URL_GOOGLE_APPS_SCRIPT'){
+      // Content-Type 'text/plain' evita la richiesta preflight CORS che Apps Script non gestisce.
+      fetch(SHEET_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ giorno: giornoLabel, orario: selectedSlot, name, phone, email }),
+      }).catch(() => {});
+    }
+
+    successText.textContent = 'Grazie ' + name + ', ti aspettiamo ' + giornoLabel.toLowerCase() + ' dalle ' + selectedSlot + '.';
+    bookingForm.hidden = true;
+    stepSuccess.hidden = false;
+    bookingForm.reset();
+  });
+
+  bookAnother.addEventListener('click', () => {
+    selectedSlot = null;
+    goToSelect();
+  });
+
+  function openModal(triggerEl){
+    lastFocusedEl = triggerEl;
+    weekIndex = 0;
+    selectedDate = getWeekDates(0)[0];
+    selectedSlot = null;
+    renderDayTabs();
+    renderSlots();
+    stepSelect.hidden = false;
+    bookingForm.hidden = true;
+    stepSuccess.hidden = true;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    fetchRemoteBookedSlots();
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    if(lastFocusedEl) lastFocusedEl.focus();
+  }
+
+  openBtns.forEach((btn) => btn.addEventListener('click', (e) => openModal(e.currentTarget)));
+
+  /* ---------- Palinsesto modal ---------- */
+  const scheduleOverlay = document.getElementById('schedule-overlay');
+  const openScheduleBtn = document.getElementById('open-schedule');
+  const closeScheduleBtn = document.getElementById('schedule-close');
+  let lastFocusedScheduleEl = null;
+
+  function openScheduleModal(triggerEl){
+    lastFocusedScheduleEl = triggerEl;
+    scheduleOverlay.classList.add('open');
+    scheduleOverlay.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeScheduleModal(){
+    scheduleOverlay.classList.remove('open');
+    scheduleOverlay.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    if(lastFocusedScheduleEl) lastFocusedScheduleEl.focus();
+  }
+  openScheduleBtn.addEventListener('click', (e) => openScheduleModal(e.currentTarget));
+  closeScheduleBtn.addEventListener('click', closeScheduleModal);
+  scheduleOverlay.addEventListener('click', (e) => { if(e.target === scheduleOverlay) closeScheduleModal(); });
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && scheduleOverlay.classList.contains('open')) closeScheduleModal();
+  });
+
+  const downloadScheduleBtn = document.getElementById('download-schedule');
+  const printDateEl = document.getElementById('print-date');
+  downloadScheduleBtn.addEventListener('click', () => {
+    printDateEl.textContent = new Date().toLocaleDateString('it-IT', { day:'numeric', month:'long', year:'numeric' });
+    window.print();
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+  });
+
+  /* ---------- Testimonials marquee ---------- */
+  const STAR_PATH = 'M10 1.5l2.47 5.24 5.78.65-4.3 3.94 1.18 5.67L10 14.98l-5.13 3.02 1.18-5.67-4.3-3.94 5.78-.65L10 1.5z';
+  const STAR_FILLED = '<svg viewBox="0 0 20 20" fill="#DFA53B"><path d="' + STAR_PATH + '"/></svg>';
+  const STAR_EMPTY = '<svg viewBox="0 0 20 20" fill="#E8DCC5"><path d="' + STAR_PATH + '"/></svg>';
+  document.querySelectorAll('.testimonial-stars').forEach(el => {
+    const rating = parseInt(el.dataset.rating || '5', 10);
+    el.innerHTML = STAR_FILLED.repeat(rating) + STAR_EMPTY.repeat(5 - rating);
+    el.setAttribute('role', 'img');
+    el.setAttribute('aria-label', rating + ' stelle su 5');
+  });
+
+  const testimonialColumns = document.querySelectorAll('.testimonial-column');
+  const reduceMotionTestimonials = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const TESTIMONIAL_SLOW_FACTOR = 0.4; // velocità al passaggio del mouse, rispetto a quella normale
+
+  testimonialColumns.forEach(col => {
+    if (reduceMotionTestimonials) return;
+
+    col.innerHTML += col.innerHTML;
+    const halfHeight = col.scrollHeight / 2;
+    const duration = parseFloat(col.dataset.duration) || 40; // secondi per un giro completo
+    const baseSpeed = halfHeight / duration; // px/s
+    const slowSpeed = baseSpeed * TESTIMONIAL_SLOW_FACTOR;
+    let targetSpeed = baseSpeed;
+    let currentSpeed = baseSpeed;
+    let position = 0;
+    let lastTime = null;
+
+    col.addEventListener('mouseenter', () => { targetSpeed = slowSpeed; });
+    col.addEventListener('mouseleave', () => { targetSpeed = baseSpeed; });
+    col.addEventListener('focusin', () => { targetSpeed = slowSpeed; });
+    col.addEventListener('focusout', () => { targetSpeed = baseSpeed; });
+
+    function tick(time){
+      if (lastTime === null) lastTime = time;
+      const dt = (time - lastTime) / 1000;
+      lastTime = time;
+      currentSpeed += (targetSpeed - currentSpeed) * Math.min(dt * 3, 1);
+      position += currentSpeed * dt;
+      if (halfHeight > 0 && position >= halfHeight) position -= halfHeight;
+      col.style.transform = 'translateY(-' + position + 'px)';
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+
+  const testimonialOverlay = document.getElementById('testimonial-overlay');
+  const testimonialClose = document.getElementById('testimonial-close');
+  const testimonialNameEl = document.getElementById('testimonial-name');
+  const testimonialTextEl = document.getElementById('testimonial-text-full');
+  let lastFocusedTestimonialEl = null;
+
+  function openTestimonialModal(card){
+    lastFocusedTestimonialEl = card;
+    testimonialNameEl.textContent = card.dataset.name;
+    testimonialTextEl.textContent = card.querySelector('[data-testimonial-text]').textContent;
+    testimonialOverlay.classList.add('open');
+    testimonialOverlay.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeTestimonialModal(){
+    testimonialOverlay.classList.remove('open');
+    testimonialOverlay.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    if(lastFocusedTestimonialEl) lastFocusedTestimonialEl.focus();
+  }
+  document.querySelectorAll('.testimonial-card').forEach(card => {
+    card.addEventListener('click', () => openTestimonialModal(card));
+    card.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openTestimonialModal(card); }
+    });
+  });
+  testimonialClose.addEventListener('click', closeTestimonialModal);
+  testimonialOverlay.addEventListener('click', (e) => { if(e.target === testimonialOverlay) closeTestimonialModal(); });
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && testimonialOverlay.classList.contains('open')) closeTestimonialModal();
+  });
+</script>
+</body>
+</html>
