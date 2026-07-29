@@ -255,7 +255,7 @@
   .hero-blobs span.b2{ width:26rem; height:26rem; bottom:-8rem; left:-6rem; background:radial-gradient(circle,#C9AEE8 0%, transparent 70%); }
   .hero-blobs span.b3{ width:20rem; height:20rem; top:6rem; left:30%; background:radial-gradient(circle,#DCEEF7 0%, transparent 70%); }
 
-  #hero-wave{ pointer-events:none; filter:blur(14px); }
+  #hero-wave{ pointer-events:none; }
 
   /* ---------- Image treatment ---------- */
   .img-treated{ position:relative; overflow:hidden; }
@@ -292,20 +292,24 @@
     display:flex; align-items:stretch; gap:1.5rem; width:max-content;
   }
   .team-nav-btn{
-    position:absolute; top:50%; transform:translateY(-50%); z-index:10;
+    display:none; position:absolute; top:50%; transform:translateY(-50%); z-index:10;
     width:2.25rem; height:2.25rem;
-    display:flex; align-items:center; justify-content:center;
+    align-items:center; justify-content:center;
     background:none; border:none; color:#8A7D6F;
     filter:drop-shadow(0 2px 4px rgba(42,33,25,.25));
     transition:transform .25s var(--ease-spring), color .2s var(--ease-out), opacity .2s var(--ease-out);
   }
   .team-nav-btn:hover:not(:disabled){ transform:translateY(-50%) scale(1.15); color:#9B72C4; }
   .team-nav-btn:disabled{ opacity:0; pointer-events:none; }
-  .team-nav-prev{ left:-.25rem; }
-  .team-nav-next{ right:-.25rem; }
+  /* Solo da tablet in su: su smartphone lo scroll laterale è già intuitivo di suo. */
   @media (min-width:640px){
+    .team-nav-btn{ display:flex; }
     .team-nav-prev{ left:-1.5rem; }
     .team-nav-next{ right:-1.5rem; }
+  }
+  @media (max-width:639px){
+    .team-nav-prev{ left:-.25rem; }
+    .team-nav-next{ right:-.25rem; }
   }
   .service-icon{
     width:3.25rem; height:3.25rem; border-radius:1rem;
@@ -1534,7 +1538,11 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const waveColors = ['#D6558E', '#9B72C4', '#5FA8CC', '#C9AEE8', '#F3B8CE'];
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // Fissa a 1 indipendentemente dallo schermo: la sfocatura del canvas (ctx.filter)
+    // varia visivamente in base alla risoluzione interna del canvas, quindi con un
+    // dpr variabile il risultato cambiava tra desktop e mobile. A dpr fisso il disegno
+    // è identico ovunque (va benissimo per uno sfondo già sfocato, non serve nitidezza retina).
+    const dpr = 1;
     let w = 0, h = 0;
 
     function resize(){
@@ -1548,6 +1556,7 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
 
     function drawWaves(time){
       ctx.clearRect(0, 0, w, h);
+      ctx.filter = 'blur(14px)';
       ctx.globalAlpha = 0.5;
       const midY = h * 0.48;
       // Disegna un po' oltre i bordi del canvas: così l'estremità aperta della linea
