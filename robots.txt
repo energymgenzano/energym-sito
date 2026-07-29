@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.energymgenzano.it/sitemap.xml
+Sitemap: https://energymgenzano.it/sitemap.xml
