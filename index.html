@@ -369,6 +369,12 @@
   }
   #nav-overlay.open{ opacity:1; pointer-events:auto; }
 
+  .mobile-panel-blob{
+    position:absolute; border-radius:9999px; filter:blur(46px); pointer-events:none;
+  }
+  .mobile-panel-blob.mpb-1{ width:14rem; height:14rem; top:-5rem; right:-6rem; background:radial-gradient(circle,#F3B8CE 0%, transparent 70%); }
+  .mobile-panel-blob.mpb-2{ width:12rem; height:12rem; bottom:-4rem; left:-5rem; background:radial-gradient(circle,#C9AEE8 0%, transparent 70%); }
+
   /* ---------- Booking overlay/modal ---------- */
   .booking-overlay{
     position:fixed; inset:0; z-index:60;
@@ -563,18 +569,21 @@
 
 <!-- Mobile nav panel -->
 <div id="nav-overlay" class="fixed inset-0 bg-ink/50 z-40 lg:hidden"></div>
-<div id="mobile-panel" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-beige-latte z-50 lg:hidden shadow-2xl p-8 flex flex-col gap-7">
-  <button id="nav-close" aria-label="Chiudi il menu" class="self-end w-10 h-10 rounded-full surface-elevated flex items-center justify-center">
+<div id="mobile-panel" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-beige-latte z-50 lg:hidden shadow-2xl rounded-l-[2rem] overflow-hidden p-8 flex flex-col gap-7">
+  <span class="mobile-panel-blob mpb-1" aria-hidden="true"></span>
+  <span class="mobile-panel-blob mpb-2" aria-hidden="true"></span>
+
+  <button id="nav-close" aria-label="Chiudi il menu" class="relative self-end w-10 h-10 rounded-full surface-elevated flex items-center justify-center">
     <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 2l12 12M14 2L2 14"/></svg>
   </button>
-  <a href="#chi-siamo" class="mobile-link text-lg font-semibold">Chi siamo</a>
-  <a href="/lezioni" class="mobile-link text-lg font-semibold">Lezioni online</a>
-  <a href="#istruttori" class="mobile-link text-lg font-semibold">Istruttori</a>
-  <a href="#corsi" class="mobile-link text-lg font-semibold">Corsi</a>
-  <a href="#recensioni" class="mobile-link text-lg font-semibold">Recensioni</a>
-  <a href="#prenota" class="mobile-link text-lg font-semibold">Prenota</a>
-  <a href="#contatti" class="mobile-link text-lg font-semibold">Contatti</a>
-  <button type="button" data-open-booking class="mobile-link btn-primary justify-center mt-4">Prenota lezione privata</button>
+  <a href="#chi-siamo" class="relative mobile-link text-lg font-semibold">Chi siamo</a>
+  <a href="/lezioni" class="relative mobile-link text-lg font-semibold">Lezioni online</a>
+  <a href="#istruttori" class="relative mobile-link text-lg font-semibold">Istruttori</a>
+  <a href="#corsi" class="relative mobile-link text-lg font-semibold">Corsi</a>
+  <a href="#recensioni" class="relative mobile-link text-lg font-semibold">Recensioni</a>
+  <a href="#prenota" class="relative mobile-link text-lg font-semibold">Prenota</a>
+  <a href="#contatti" class="relative mobile-link text-lg font-semibold">Contatti</a>
+  <button type="button" data-open-booking class="relative mobile-link btn-primary justify-center mt-4">Prenota lezione privata</button>
 </div>
 
 <main id="top">

@@ -1,0 +1,2 @@
+/lezioni       https://online.energymgenzano.it        301
+/lezioni/*     https://online.energymgenzano.it/:splat  301
