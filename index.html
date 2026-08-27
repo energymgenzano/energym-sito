@@ -544,6 +544,7 @@
 
     <nav class="hidden lg:flex items-center gap-9 font-medium text-ink-soft">
       <a href="#chi-siamo" class="hover:text-rosa-energia transition-colors">Chi siamo</a>
+      <a href="/lezioni" class="hover:text-rosa-energia transition-colors">Lezioni online</a>
       <a href="#istruttori" class="hover:text-rosa-energia transition-colors">Istruttori</a>
       <a href="#corsi" class="hover:text-rosa-energia transition-colors">Corsi</a>
       <a href="#recensioni" class="hover:text-rosa-energia transition-colors">Recensioni</a>
@@ -567,6 +568,7 @@
     <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 2l12 12M14 2L2 14"/></svg>
   </button>
   <a href="#chi-siamo" class="mobile-link text-lg font-semibold">Chi siamo</a>
+  <a href="/lezioni" class="mobile-link text-lg font-semibold">Lezioni online</a>
   <a href="#istruttori" class="mobile-link text-lg font-semibold">Istruttori</a>
   <a href="#corsi" class="mobile-link text-lg font-semibold">Corsi</a>
   <a href="#recensioni" class="mobile-link text-lg font-semibold">Recensioni</a>
@@ -588,16 +590,22 @@
         Trasforma l'energia<br class="hidden sm:block"> in risultati.
       </h1>
       <p class="mt-6 text-lg text-ink-soft max-w-xl mx-auto">
-        Corsi collettivi, personal training e lezioni private con un metodo su misura per il tuo obiettivo. Un ambiente pensato per farti sentire a casa fin dal primo allenamento.
+        Corsi collettivi, personal training e lezioni private con un metodo su misura per il tuo obiettivo. E ora anche in diretta online, da seguire comodamente da casa.
       </p>
       <div class="mt-9 flex flex-wrap gap-4 justify-center">
-        <button type="button" data-open-booking class="btn-primary">Prenota lezione privata</button>
-        <a href="#corsi" class="btn-secondary">Scopri i corsi</a>
+        <button type="button" data-open-booking class="btn-primary w-full sm:w-auto sm:min-w-[280px]">Prenota lezione privata</button>
+        <a href="/lezioni" class="btn-secondary w-full sm:w-auto sm:min-w-[280px]">Lezioni online</a>
       </div>
 
-      <div class="mt-12 inline-flex items-center gap-4 surface-floating px-6 py-4 text-left">
-        <span class="tick-bars"><span></span><span></span><span></span><span></span></span>
-        <p class="text-sm font-semibold leading-snug">Lezioni private ogni settimana,<br>su prenotazione</p>
+      <div class="mt-12 flex flex-col sm:flex-row items-center gap-4 justify-center">
+        <div class="inline-flex items-center gap-4 surface-floating px-6 py-4 text-left">
+          <span class="tick-bars"><span></span><span></span><span></span><span></span></span>
+          <p class="text-sm font-semibold leading-snug">Lezioni private ogni settimana,<br>su prenotazione</p>
+        </div>
+        <div class="inline-flex items-center gap-4 surface-floating px-6 py-4 text-left">
+          <span class="tick-bars"><span></span><span></span><span></span><span></span></span>
+          <p class="text-sm font-semibold leading-snug">10 lezioni online in diretta<br>ogni settimana</p>
+        </div>
       </div>
     </div>
   </section>
@@ -639,6 +647,50 @@
           <p class="font-semibold text-sm">Training aziendale in sede</p>
           <p class="text-sm text-ink-soft mt-1">Portiamo i nostri corsi direttamente in azienda, con percorsi su misura per i team. Un servizio già realizzato per la Fondazione ENPAM.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEZIONI ONLINE ===================== -->
+  <section id="lezioni-online" class="max-w-5xl mx-auto px-5 sm:px-8 py-20">
+    <div class="reveal max-w-2xl mx-auto text-center">
+      <span class="eyebrow justify-center"><span class="tick-bars"><span></span><span></span><span></span><span></span></span>Lezioni online</span>
+      <h2 class="font-display tracking-tightish text-3xl sm:text-4xl font-700 mt-4" style="font-weight:700;">Le lezioni di Energym, anche da casa</h2>
+      <p class="mt-4 text-ink-soft max-w-xl mx-auto">Le stesse lezioni che facciamo in sala, trasmesse in diretta con i nostri istruttori. Ti colleghi dal telefono, dal tablet o dal computer, e ti alleni da dove vuoi.</p>
+    </div>
+
+    <div class="reveal mt-14 grid sm:grid-cols-3 gap-6">
+      <div class="service-card surface-elevated p-7">
+        <div class="service-icon mb-5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M8.5 8.5a5 5 0 000 7M15.5 8.5a5 5 0 010 7M5.5 5.5a9 9 0 000 13M18.5 5.5a9 9 0 010 13"/></svg>
+        </div>
+        <h3 class="font-display font-600 text-lg" style="font-weight:600;">In diretta, non registrate</h3>
+        <p class="mt-2 text-sm text-ink-soft">Dieci lezioni a settimana con Emanuela, Elisabetta e Giulia, agli orari della palestra.</p>
+      </div>
+      <div class="service-card surface-elevated p-7">
+        <div class="service-icon mb-5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9"/><path d="M3 4v5h5"/></svg>
+        </div>
+        <h3 class="font-display font-600 text-lg" style="font-weight:600;">Riguardale quando vuoi</h3>
+        <p class="mt-2 text-sm text-ink-soft">Ogni lezione resta disponibile 30 giorni: se salti l'orario, la recuperi quando ti fa comodo.</p>
+      </div>
+      <div class="service-card surface-elevated p-7">
+        <div class="service-icon mb-5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 10.6a2 2 0 002.8 2.8"/><path d="M9.9 5.1A9.8 9.8 0 0112 5c5 0 9 4 10 7-.6 1.7-1.7 3.4-3.2 4.7M6.5 6.7C4.4 8 2.9 9.8 2 12c.7 2 2.1 3.7 3.9 5"/></svg>
+        </div>
+        <h3 class="font-display font-600 text-lg" style="font-weight:600;">Nessuno ti vede</h3>
+        <p class="mt-2 text-sm text-ink-soft">L'inquadratura riprende solo l'istruttore. Tu ti alleni in tranquillità, a casa tua.</p>
+      </div>
+    </div>
+
+    <div class="reveal mt-14 flex flex-col items-center text-center">
+      <div class="inline-flex items-center gap-4 surface-floating px-6 py-4 text-left">
+        <span class="tick-bars"><span></span><span></span><span></span><span></span></span>
+        <p class="text-sm font-semibold leading-snug">Per i soci Energym è incluso nell'abbonamento.<br class="hidden sm:block"> Solo online: 25 euro al mese o 250 euro all'anno.</p>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-4 justify-center">
+        <a href="/lezioni" class="btn-primary">Entra nell'area lezioni online</a>
+        <a href="https://online.energymgenzano.it/abbonati" class="btn-secondary">Vedi gli orari</a>
       </div>
     </div>
   </section>
@@ -782,7 +834,6 @@
           <span class="eyebrow"><span class="tick-bars"><span></span><span></span><span></span><span></span></span>Corsi collettivi</span>
           <h3 class="font-display tracking-tightish text-2xl sm:text-3xl font-700 mt-4" style="font-weight:700;">Le nostre lezioni di gruppo</h3>
           <p class="mt-3 text-sm text-ink-soft">Scopri quando si svolge ogni lezione durante la settimana, giorno per giorno.</p>
-          <p class="mt-2 text-sm font-semibold text-rosa-energia">I corsi di gruppo sono sospesi per tutto agosto: il palinsesto riprende dal 31 agosto.</p>
           <button type="button" id="open-schedule" class="btn-secondary mt-5 !py-3 !px-6 text-sm">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
             Vedi il palinsesto aggiornato
@@ -1061,7 +1112,6 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
       <p class="mt-5 text-ink-soft max-w-xl mx-auto">
         Scegli il giorno e l'orario che preferisci tra gli slot disponibili della settimana. Conferma in pochi secondi, direttamente da qui.
       </p>
-      <p class="mt-3 text-sm font-semibold text-rosa-energia">Chiusi per ferie dal 5 al 10 e dal 12 al 13 agosto.</p>
       <button id="open-booking" class="btn-primary mt-9 !text-base !py-4 !px-9">Prenota lezione privata</button>
     </div>
   </section>
@@ -1221,7 +1271,6 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
       <div>
         <h3 id="schedule-title" class="font-display text-3xl font-700 uppercase tracking-wide text-rosa-energia" style="font-weight:700;">Palinsesto corsi</h3>
         <p class="text-ink-soft text-sm mt-2">L'orario aggiornato delle lezioni di gruppo, giorno per giorno.</p>
-        <p class="text-sm font-semibold text-rosa-energia mt-2">Corsi sospesi per tutto agosto: il palinsesto qui sotto è in vigore dal 31 agosto.</p>
       </div>
       <a href="palinsesto-energym.pdf" download="Palinsesto-Energym.pdf" class="btn-secondary !py-2.5 !px-5 text-sm shrink-0">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 19h16"/></svg>
@@ -1378,7 +1427,6 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
       <h1>Palinsesto corsi</h1>
     </div>
   </div>
-  <p class="print-note" style="color:#D6558E;font-weight:600;margin:0 0 14px;">Corsi sospesi per tutto agosto: il palinsesto è in vigore dal 31 agosto.</p>
 
   <table class="print-table">
     <thead>
@@ -1692,19 +1740,6 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
     "Venerdì":   ["07:30–08:30","08:30–09:30","11:30–12:30","12:30–13:30","19:30–20:30","20:30–21:30"],
     "Sabato":    ["08:00–09:00","11:00–12:00","12:00–13:00","13:00–14:00","14:00–15:00","15:00–16:00","16:00–17:00","17:00–18:00"],
   };
-  // Periodi di chiusura per ferie: in questi giorni non si possono prenotare
-  // lezioni private (date incluse negli estremi, formato 'YYYY-MM-DD').
-  const CLOSED_RANGES = [
-    { from: '2026-08-05', to: '2026-08-10' },
-    { from: '2026-08-12', to: '2026-08-13' },
-  ];
-  function isoDate(date){
-    return date.getFullYear() + '-' + pad2(date.getMonth() + 1) + '-' + pad2(date.getDate());
-  }
-  function isDateClosed(date){
-    const iso = isoDate(date);
-    return CLOSED_RANGES.some(r => iso >= r.from && iso <= r.to);
-  }
   // Nomi dei giorni indicizzati come Date.getDay() (0=Domenica). La palestra è
   // chiusa la domenica: quel giorno non compare mai tra le date prenotabili.
   const GIORNI_IT = ['Domenica','Lunedì','Martedì','Mercoledì','Giovedì','Venerdì','Sabato'];
@@ -1787,18 +1822,13 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
       btn.textContent = formatTabLabel(date);
       btn.setAttribute('role','tab');
       btn.setAttribute('aria-selected', formatDateLabel(date) === selectedLabel ? 'true' : 'false');
-      if (isDateClosed(date)){
-        btn.disabled = true;
-        btn.title = 'Chiuso per ferie';
-      } else {
-        btn.addEventListener('click', () => {
-          selectedDate = date;
-          selectedSlot = null;
-          slotTakenNotice.hidden = true;
-          renderDayTabs();
-          renderSlots();
-        });
-      }
+      btn.addEventListener('click', () => {
+        selectedDate = date;
+        selectedSlot = null;
+        slotTakenNotice.hidden = true;
+        renderDayTabs();
+        renderSlots();
+      });
       dayTabsEl.appendChild(btn);
     });
     weekPrevBtn.disabled = weekIndex === 0;
@@ -1828,13 +1858,6 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
       const msg = document.createElement('p');
       msg.className = 'col-span-3 sm:col-span-4 text-sm text-ink-soft text-center py-6';
       msg.textContent = 'Verifica disponibilità…';
-      slotGridEl.appendChild(msg);
-      return;
-    }
-    if (isDateClosed(selectedDate)){
-      const msg = document.createElement('p');
-      msg.className = 'col-span-3 sm:col-span-4 text-sm text-ink-soft text-center py-6';
-      msg.textContent = 'Chiuso per ferie in questa data.';
       slotGridEl.appendChild(msg);
       return;
     }
