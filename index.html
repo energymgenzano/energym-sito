@@ -548,19 +548,19 @@
       <img src="guidelines/energym_logo_trasparente.png" alt="Energym" class="h-9 w-auto">
     </a>
 
-    <nav class="hidden lg:flex items-center gap-9 font-medium text-ink-soft">
-      <a href="#chi-siamo" class="hover:text-rosa-energia transition-colors">Chi siamo</a>
-      <a href="/lezioni" class="hover:text-rosa-energia transition-colors">Lezioni online</a>
-      <a href="#istruttori" class="hover:text-rosa-energia transition-colors">Istruttori</a>
-      <a href="#corsi" class="hover:text-rosa-energia transition-colors">Corsi</a>
-      <a href="#recensioni" class="hover:text-rosa-energia transition-colors">Recensioni</a>
-      <a href="#prenota" class="hover:text-rosa-energia transition-colors">Prenota</a>
-      <a href="#contatti" class="hover:text-rosa-energia transition-colors">Contatti</a>
+    <nav class="hidden xl:flex items-center gap-6 font-medium text-ink-soft shrink-0">
+      <a href="#chi-siamo" class="whitespace-nowrap hover:text-rosa-energia transition-colors">Chi siamo</a>
+      <a href="#lezioni-online" class="whitespace-nowrap hover:text-rosa-energia transition-colors">Lezioni online</a>
+      <button type="button" data-open-schedule class="whitespace-nowrap hover:text-rosa-energia transition-colors bg-transparent border-0 p-0 cursor-pointer">Palinsesto</button>
+      <a href="#istruttori" class="whitespace-nowrap hover:text-rosa-energia transition-colors">Istruttori</a>
+      <a href="#corsi" class="whitespace-nowrap hover:text-rosa-energia transition-colors">Corsi</a>
+      <a href="#recensioni" class="whitespace-nowrap hover:text-rosa-energia transition-colors">Recensioni</a>
+      <a href="#contatti" class="whitespace-nowrap hover:text-rosa-energia transition-colors">Contatti</a>
     </nav>
 
     <div class="flex items-center gap-3">
       <button type="button" data-open-booking class="hidden sm:inline-flex btn-primary !py-3 !px-6 text-sm">Prenota lezione privata</button>
-      <button id="nav-toggle" aria-label="Apri il menu" aria-expanded="false" class="lg:hidden w-11 h-11 rounded-full surface-elevated flex items-center justify-center">
+      <button id="nav-toggle" aria-label="Apri il menu" aria-expanded="false" class="xl:hidden w-11 h-11 rounded-full surface-elevated flex items-center justify-center">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 5h16M2 10h16M2 15h16"/></svg>
       </button>
     </div>
@@ -568,8 +568,8 @@
 </header>
 
 <!-- Mobile nav panel -->
-<div id="nav-overlay" class="fixed inset-0 bg-ink/50 z-40 lg:hidden"></div>
-<div id="mobile-panel" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-beige-latte z-50 lg:hidden shadow-2xl rounded-l-[2rem] overflow-hidden p-8 flex flex-col gap-7">
+<div id="nav-overlay" class="fixed inset-0 bg-ink/50 z-40 xl:hidden"></div>
+<div id="mobile-panel" class="fixed top-0 right-0 h-full w-72 max-w-[80%] bg-beige-latte z-50 xl:hidden shadow-2xl rounded-l-[2rem] overflow-hidden p-8 flex flex-col gap-7">
   <span class="mobile-panel-blob mpb-1" aria-hidden="true"></span>
   <span class="mobile-panel-blob mpb-2" aria-hidden="true"></span>
 
@@ -577,11 +577,11 @@
     <svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 2l12 12M14 2L2 14"/></svg>
   </button>
   <a href="#chi-siamo" class="relative mobile-link text-lg font-semibold">Chi siamo</a>
-  <a href="/lezioni" class="relative mobile-link text-lg font-semibold">Lezioni online</a>
+  <a href="#lezioni-online" class="relative mobile-link text-lg font-semibold">Lezioni online</a>
+  <button type="button" data-open-schedule class="relative mobile-link text-lg font-semibold text-left bg-transparent border-0 p-0 cursor-pointer">Palinsesto</button>
   <a href="#istruttori" class="relative mobile-link text-lg font-semibold">Istruttori</a>
   <a href="#corsi" class="relative mobile-link text-lg font-semibold">Corsi</a>
   <a href="#recensioni" class="relative mobile-link text-lg font-semibold">Recensioni</a>
-  <a href="#prenota" class="relative mobile-link text-lg font-semibold">Prenota</a>
   <a href="#contatti" class="relative mobile-link text-lg font-semibold">Contatti</a>
   <button type="button" data-open-booking class="relative mobile-link btn-primary justify-center mt-4">Prenota lezione privata</button>
 </div>
@@ -616,6 +616,11 @@
           <p class="text-sm font-semibold leading-snug">10 lezioni online in diretta<br>ogni settimana</p>
         </div>
       </div>
+
+      <button type="button" data-open-schedule class="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-rosa-energia hover:text-viola-profondo transition-colors bg-transparent border-0 p-0 cursor-pointer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+        Vedi il palinsesto
+      </button>
     </div>
   </section>
 
@@ -2047,7 +2052,7 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
 
   /* ---------- Palinsesto modal ---------- */
   const scheduleOverlay = document.getElementById('schedule-overlay');
-  const openScheduleBtn = document.getElementById('open-schedule');
+  const openScheduleBtns = [document.getElementById('open-schedule'), ...document.querySelectorAll('[data-open-schedule]')];
   const closeScheduleBtn = document.getElementById('schedule-close');
   let lastFocusedScheduleEl = null;
 
@@ -2063,7 +2068,7 @@ Ma quello che rende davvero speciale Energym è l'ambiente: familiare, inclusivo
     document.body.style.overflow = '';
     if(lastFocusedScheduleEl) lastFocusedScheduleEl.focus();
   }
-  openScheduleBtn.addEventListener('click', (e) => openScheduleModal(e.currentTarget));
+  openScheduleBtns.forEach((btn) => btn.addEventListener('click', (e) => openScheduleModal(e.currentTarget)));
   closeScheduleBtn.addEventListener('click', closeScheduleModal);
   scheduleOverlay.addEventListener('click', (e) => { if(e.target === scheduleOverlay) closeScheduleModal(); });
   document.addEventListener('keydown', (e) => {
